@@ -1008,6 +1008,202 @@
     }
 
     /* =======================================================================
+       SECTION: MEET YOUR ADVISOR (COMPACT, CONVERSION-FOCUSED)
+       ======================================================================= */
+    .advisor-section {
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .advisor-card-wrapper {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .advisor-card {
+      background: linear-gradient(135deg, #ffffff 0%, #fbfcfe 100%);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.35rem, 3.5vw, 2.5rem);
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 820px) {
+      .advisor-card {
+        grid-template-columns: minmax(240px, 300px) 1fr;
+      }
+    }
+
+    .advisor-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--brand-teal) 0%, var(--gold-primary) 100%);
+    }
+
+    .advisor-media-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .advisor-photo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 290px;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(4, 63, 66, 0.12), 0 8px 10px -6px rgba(4, 63, 66, 0.08);
+      border: 2px solid var(--gold-border);
+      background: #042426;
+    }
+
+    .advisor-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .advisor-photo-wrap:hover .advisor-photo-img {
+      transform: scale(1.02);
+    }
+
+    .advisor-social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 0.95rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .advisor-social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--brand-teal);
+      background: var(--bg-muted);
+      border: 1px solid var(--border-light);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .advisor-social-pill:hover {
+      background: var(--brand-teal-subtle);
+      border-color: var(--brand-teal);
+      color: var(--brand-teal);
+      transform: translateY(-1px);
+    }
+
+    .advisor-social-pill svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .advisor-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+
+    .advisor-eyebrow-role {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
+    }
+
+    .advisor-name-header {
+      font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0f172a;
+    }
+
+    .advisor-role-separator {
+      color: var(--gold-primary);
+      margin-inline: 0.2rem;
+    }
+
+    .advisor-credentials-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+    }
+
+    .credential-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--brand-teal);
+      background: var(--brand-teal-subtle);
+      border: 1px solid rgba(4, 63, 66, 0.22);
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .advisor-bio-copy {
+      font-size: clamp(0.925rem, 1.2vw + 0.1rem, 1rem);
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .advisor-bio-copy p {
+      margin-bottom: 0.65rem;
+    }
+
+    .advisor-bio-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .advisor-cta-box {
+      margin-top: 0.35rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    @media (min-width: 600px) {
+      .advisor-cta-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .advisor-cta-prompt {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brand-teal);
+    }
+
+    /* =======================================================================
        SECTION 6: CONSULTATION BOOKING & PAYMENT SECTION
        ======================================================================= */
     .booking-section {
@@ -1580,8 +1776,9 @@
         <a href="#funding-opportunities" class="nav-link">Funding & Grants</a>
         <a href="#how-we-help" class="nav-link">How We Help</a>
         <a href="#global-speaking" class="nav-link">Global Speaking</a>
-        <a href="#why-us" class="nav-link">Why Founder Capital</a>
-        <a href="#pricing-sheet" class="nav-link">Pricing Sheet</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#advisor" class="nav-link">Meet Your Advisor</a>
+        <a href="#pricing-sheet" class="nav-link">Pricing</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#booking" class="btn btn-gold btn-sm">
           <span>BOOK A CALL</span>
@@ -1621,6 +1818,10 @@
         </a>
         <a href="#why-us" class="mobile-nav-link" data-close-menu>
           <span>Why Founder Capital</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+        <a href="#advisor" class="mobile-nav-link" data-close-menu>
+          <span>Meet Your Advisor</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
         </a>
         <a href="#pricing-sheet" class="mobile-nav-link" data-close-menu>
@@ -2075,7 +2276,111 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- SECTION 6: THE CONSULTATION BOOKING & PAYMENT SECTION                   -->
+    <!-- SECTION 6: MEET YOUR ADVISOR                                            -->
+    <!-- ======================================================================= -->
+    <section class="section-padding advisor-section" id="advisor">
+      <div class="container">
+        
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <div class="section-eyebrow">Direct 1-on-1 Guidance</div>
+          <h2 class="section-title">MEET YOUR <span class="text-teal">ADVISOR</span></h2>
+          <p class="section-description">
+            Personalised, founder-to-founder consultation with practical insight from international fellowship selection and venture building.
+          </p>
+        </div>
+
+        <div class="advisor-card-wrapper">
+          <div class="advisor-card">
+            
+            <!-- Advisor Portrait Column -->
+            <div class="advisor-media-col">
+              <div class="advisor-photo-wrap">
+                <img 
+                  src="assets/images/muzalema-mwanza.jpg" 
+                  alt="Muzalema Mwanza, Founder Capital Lead Advisor" 
+                  class="advisor-photo-img" 
+                  width="1080" 
+                  height="1079" 
+                  loading="lazy" 
+                  decoding="async" 
+                  onerror="this.src='public/assets/aistudio/474591799_10162905238580680_7066370865884355721_n_c8fbd598.jpg'"
+                />
+              </div>
+
+              <!-- Profile Links: LinkedIn & Echoing Green Profile -->
+              <div class="advisor-social-links">
+                <a 
+                  href="https://www.linkedin.com/in/muzalemamwanza/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="advisor-social-pill"
+                  title="View Muzalema Mwanza's LinkedIn Profile"
+                >
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                  <span>LinkedIn Profile</span>
+                </a>
+                <a 
+                  href="https://fellows.echoinggreen.org/fellow/muzalema-mwanza/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="advisor-social-pill"
+                  title="View Muzalema Mwanza's Echoing Green Fellow Profile"
+                >
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                  </svg>
+                  <span>Echoing Green Profile</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Advisor Bio & Credentials Column -->
+            <div class="advisor-info-col">
+              <div>
+                <div class="advisor-eyebrow-role">Lead Advisor & Social Entrepreneur</div>
+                <h3 class="advisor-name-header">
+                  Muzalema Mwanza <span class="advisor-role-separator">|</span> <span class="text-teal">Lead Advisor</span>
+                </h3>
+                <div class="advisor-credentials-pills">
+                  <span class="credential-tag">Echoing Green Fellow</span>
+                  <span class="credential-tag">Ashoka Fellow</span>
+                  <span class="credential-tag">Founder, Safe Motherhood Alliance</span>
+                </div>
+              </div>
+
+              <div class="advisor-bio-copy">
+                <p>
+                  A Zambian social entrepreneur and founder of Safe Motherhood Alliance, Muzalema brings hands-on experience in building an impact-driven enterprise and working with international fellowship programmes.
+                </p>
+                <p>
+                  As an Echoing Green Fellow and Ashoka Fellow, she brings a founder's perspective to helping entrepreneurs strengthen their applications, identify relevant opportunities and position their ideas for growth.
+                </p>
+              </div>
+
+              <!-- Conversion / Booking Prompt -->
+              <div class="advisor-cta-box">
+                <div>
+                  <div class="advisor-cta-prompt">Ready to take your idea further?</div>
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Book a one-on-one discovery or advisory consultation directly with Muzalema.</div>
+                </div>
+                <a href="#booking" class="btn btn-gold" style="padding: 0.85rem 1.75rem; white-space: nowrap;">
+                  <span>BOOK A CALL WITH MUZALEMA</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 7: THE CONSULTATION BOOKING & PAYMENT SECTION                   -->
     <!-- ======================================================================= -->
     <section class="section-padding booking-section" id="booking">
       <div class="container">
@@ -2491,6 +2796,7 @@
             <li><a href="#how-we-help">How We Help</a></li>
             <li><a href="#global-speaking">Global Speaking</a></li>
             <li><a href="#why-us">Why Founder Capital</a></li>
+            <li><a href="#advisor">Meet Your Advisor</a></li>
             <li><a href="#pricing-sheet">Pricing Sheet</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#booking">Book a Call</a></li>
