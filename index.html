@@ -2,71 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Founder Capital | Structured Business Advisory for Zambian Entrepreneurs</title>
-  <meta name="description" content="Founder Capital provides structured, paid business advisory services for Zambian entrepreneurs on business growth, funding opportunities, international fellowships, pitch preparation, and financials." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Founder Capital | Founder Advisory & International Opportunities</title>
+  <meta name="description" content="Founder Capital is a trusted founder advisory service helping Zambian and African entrepreneurs access funding, grants, fellowships, and international speaking opportunities. Your Vision. Our Guidance. Your Growth." />
   
-  <!-- Open Graph / Social Cards -->
+  <!-- Open Graph / Social Sharing Cards -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://foundercapital.zm" />
-  <meta property="og:title" content="Founder Capital | Structured Business Advisory" />
-  <meta property="og:description" content="Structured 1-on-1 business advisory for ambitious Zambian entrepreneurs. Discovery calls, funding & fellowship support, pitch coaching, and financial modeling." />
-  <meta property="og:image" content="assets/images/founder-capital-logo.png" />
+  <meta property="og:title" content="Founder Capital | Your Vision. Our Guidance. Your Growth." />
+  <meta property="og:description" content="Professional founder advisory helping entrepreneurs, innovators and social impact founders access funding, grants, fellowships and international visibility beyond their local markets." />
+  <meta property="og:image" content="assets/images/hero-entrepreneur.jpg" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Founder Capital | Structured Business Advisory" />
-  <meta name="twitter:description" content="Build Smarter. Find Opportunities. Grow With Confidence. Structured Business Advisory in Zambia." />
-  <meta name="twitter:image" content="assets/images/founder-capital-logo.png" />
+  <meta name="twitter:title" content="Founder Capital | Founder Advisory & Opportunities" />
+  <meta name="twitter:description" content="HAVE A BUSINESS OR INNOVATION THAT NEEDS FUNDING? Discover grants, fellowships and international opportunities with Founder Capital." />
+  <meta name="twitter:image" content="assets/images/hero-entrepreneur.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23142a38'/><path d='M25 25 Q50 15 75 25 C60 40 45 42 45 52 Q60 52 70 52 C55 65 42 66 40 85 C32 85 25 78 25 25 Z' fill='%23c89332'/></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23043f42'/><path d='M25 25 Q50 15 75 25 C60 40 45 42 45 52 Q60 52 70 52 C55 65 42 66 40 85 C32 85 25 78 25 25 Z' fill='%23c89332'/></svg>" />
 
-  <!-- Google Fonts: Plus Jakarta Sans (with system font fallbacks) -->
+  <!-- Performance: Preconnect & Preload Critical Above-The-Fold Assets -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="assets/images/founder-capital-logo.png" />
+  <link rel="preload" as="image" href="assets/images/hero-entrepreneur.jpg" fetchpriority="high" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (with swap & fallback) -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- ========================================================================= -->
-  <!-- STYLESHEET (CSS3) - BRIGHT & CLEAN PREMIUM ADVISORY THEME                 -->
+  <!-- STYLESHEET (CSS3) - OPTIMIZED FOR ALL DEVICES, TABLETS, & PERFORMANCE     -->
   <!-- ========================================================================= -->
   <style>
-    /* =======================================================================
-       CSS VARIABLES: BRIGHT, PROFESSIONAL BUSINESS ADVISORY PALETTE
-       Luminous whites, warm alabaster tones, rich navy, and refined gold.
-       ======================================================================= */
     :root {
-      /* Backgrounds & Surfaces (Bright & Luminous) */
+      /* Palette */
       --bg-body: #f8fafc;
       --bg-surface: #ffffff;
       --bg-card: #ffffff;
       --bg-card-hover: #fbfcfe;
       --bg-muted: #f1f5f9;
-      --bg-input: #ffffff;
+      --bg-dark: #042426;
 
-      /* Brand Navy / Charcoal Typography */
-      --brand-navy: #142a38;
-      --brand-teal: #1d3d52;
+      /* Brand Typography & Accents - Logo Reference Teal #043f42 */
+      --brand-navy: #043f42;
+      --brand-navy-light: #075b60;
+      --brand-teal: #043f42;
+      --brand-teal-light: #086a70;
+      --brand-teal-subtle: #e6f2f3;
       --text-main: #0f172a;
       --text-muted: #475569;
       --text-subtle: #64748b;
       --text-light: #94a3b8;
 
-      /* Refined Warm Gold Accents (Matched to Founder Capital Logo) */
+      /* Gold Palette (Matched to Founder Capital Logo) */
       --gold-primary: #b88628;
       --gold-hover: #a3741e;
-      --gold-light: #fef7ea;
       --gold-accent: #c89332;
-      --gold-border: rgba(184, 134, 40, 0.28);
-      --gold-border-subtle: rgba(184, 134, 40, 0.16);
-      --gold-glow: rgba(184, 134, 40, 0.14);
+      --gold-light: #fef7ea;
+      --gold-border: rgba(184, 134, 40, 0.3);
+      --gold-border-subtle: rgba(184, 134, 40, 0.15);
+      --gold-glow: rgba(184, 134, 40, 0.18);
 
-      /* Border Radii & Shadows */
+      /* Borders & Shadows */
       --border-light: #e2e8f0;
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --border-medium: #cbd5e1;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
       --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06);
-      --shadow-lg: 0 10px 28px rgba(15, 23, 42, 0.08);
-      --shadow-hover: 0 14px 34px rgba(15, 23, 42, 0.12);
+      --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-hover: 0 16px 36px rgba(15, 23, 42, 0.12);
 
       --radius-sm: 8px;
       --radius-md: 12px;
@@ -74,11 +78,8 @@
       --radius-xl: 24px;
       --radius-full: 9999px;
 
-      /* Layout */
-      --max-width: 1160px;
-      --header-height: 72px;
-
-      /* Typography */
+      --max-width: 1180px;
+      --header-height: 74px;
       --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
@@ -93,6 +94,8 @@
       scroll-behavior: smooth;
       font-size: 16px;
       color-scheme: light;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
@@ -104,6 +107,14 @@
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
+
+    /* Prevent mobile fixed bottom bar from covering content on phones */
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+      }
     }
 
     a {
@@ -112,10 +123,12 @@
       transition: color 0.2s ease, opacity 0.2s ease;
     }
 
+    /* Touch optimization: Eliminate 300ms tap delay & ensure iOS does not zoom in on focus */
     button, input, select, textarea {
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 1rem; /* >= 16px prevents iOS Safari automatic zoom */
       color: inherit;
+      touch-action: manipulation;
     }
 
     button {
@@ -128,94 +141,96 @@
       max-width: 100%;
       height: auto;
       display: block;
+      content-visibility: auto;
     }
 
+    /* Accessibility focus rings */
     :focus-visible {
       outline: 2px solid var(--gold-primary);
       outline-offset: 3px;
     }
 
+    /* Fluid Layout Containers */
     .container {
       width: 100%;
       max-width: var(--max-width);
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 3.5vw, 1.75rem);
     }
 
-    /* Streamlined vertical spacing (reduced by 15-20% for faster flow) */
     .section-padding {
-      padding-top: 3.75rem;
-      padding-bottom: 3.75rem;
+      padding-block: clamp(2.75rem, 5.5vw, 4.5rem);
     }
 
-    @media (max-width: 768px) {
-      .section-padding {
-        padding-top: 2.75rem;
-        padding-bottom: 2.75rem;
-      }
-    }
-
-    /* =======================================================================
-       TYPOGRAPHY & SECTION HEADERS
-       ======================================================================= */
+    /* Headings & Section Headers with Fluid Typography */
     .section-header {
       text-align: center;
-      max-width: 680px;
-      margin: 0 auto 2.5rem auto;
+      max-width: 780px;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem) auto;
     }
 
     .section-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      font-weight: 700;
+      gap: 0.45rem;
+      font-size: clamp(0.725rem, 1.5vw, 0.775rem);
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--gold-primary);
       background: var(--gold-light);
       border: 1px solid var(--gold-border);
-      padding: 0.3rem 0.85rem;
+      padding: 0.35rem 0.95rem;
       border-radius: var(--radius-full);
       margin-bottom: 0.85rem;
+      max-width: 100%;
+      text-align: center;
     }
 
     .section-title {
-      font-size: 2.15rem;
+      font-size: clamp(1.75rem, 3.2vw + 0.5rem, 2.5rem);
       font-weight: 800;
       line-height: 1.2;
       letter-spacing: -0.025em;
-      color: var(--brand-navy);
-      margin-bottom: 0.75rem;
-    }
-
-    @media (min-width: 768px) {
-      .section-title {
-        font-size: 2.5rem;
-      }
+      color: #0f172a;
+      margin-bottom: 0.85rem;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .section-description {
-      font-size: 1.05rem;
+      font-size: clamp(0.975rem, 1.2vw + 0.25rem, 1.075rem);
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .text-gold {
       color: var(--gold-primary);
     }
 
-    /* =======================================================================
-       BUTTONS & INTERACTIVE ELEMENTS
-       ======================================================================= */
+    /* Branded Bold Header Text Accents - Exact Logo Reference #043f42 */
+    .text-teal {
+      color: #043f42 !important;
+    }
+
+    .bold-teal {
+      color: #043f42 !important;
+      font-weight: 800;
+    }
+
+    .hero-title .text-teal,
+    .section-title .text-teal {
+      color: #043f42 !important;
+    }
+
+    /* Buttons with Minimum 44px Touch Targets */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.45rem;
-      padding: 0.75rem 1.45rem;
+      gap: 0.5rem;
+      min-height: 44px;
+      padding: 0.75rem 1.6rem;
       font-size: 0.925rem;
       font-weight: 700;
       border-radius: var(--radius-full);
@@ -232,7 +247,7 @@
     .btn-gold {
       background: linear-gradient(135deg, #c89332, #a8761d);
       color: #ffffff;
-      box-shadow: 0 3px 12px rgba(184, 134, 40, 0.28);
+      box-shadow: 0 4px 14px rgba(184, 134, 40, 0.28);
     }
 
     .btn-gold:hover {
@@ -244,7 +259,7 @@
     .btn-secondary {
       background: #ffffff;
       color: var(--brand-navy);
-      border: 1px solid var(--border-light);
+      border: 1.5px solid var(--border-light);
       box-shadow: var(--shadow-sm);
     }
 
@@ -272,7 +287,8 @@
     }
 
     .btn-sm {
-      padding: 0.5rem 1.1rem;
+      min-height: 40px;
+      padding: 0.5rem 1.15rem;
       font-size: 0.85rem;
     }
 
@@ -298,13 +314,13 @@
       left: 0;
       width: 100%;
       height: var(--header-height);
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(226, 232, 240, 0.85);
       z-index: 1000;
-      transition: all 0.3s ease;
       box-shadow: var(--shadow-sm);
+      padding-top: env(safe-area-inset-top, 0);
     }
 
     .header-inner {
@@ -312,25 +328,34 @@
       align-items: center;
       justify-content: space-between;
       height: 100%;
+      gap: 1rem;
     }
 
-    .brand-logo-wrap {
+    .brand-identity {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      text-decoration: none;
+      min-width: 0;
     }
 
     .brand-logo-img {
-      height: 40px;
+      height: 38px;
       width: auto;
+      max-width: 180px;
       object-fit: contain;
+    }
+
+    @media (max-width: 360px) {
+      .brand-logo-img {
+        height: 32px;
+        max-width: 150px;
+      }
     }
 
     .brand-logo-fallback {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .brand-mark {
@@ -352,64 +377,71 @@
       letter-spacing: 0.04em;
       color: var(--brand-navy);
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .brand-text span {
       color: var(--gold-primary);
     }
 
-    /* Desktop Navigation */
+    /* Navigation Breakpoints: Desktop starts cleanly at 1024px to prevent tablet wrap */
     .nav-desktop {
       display: none;
       align-items: center;
-      gap: 1.85rem;
+      gap: clamp(0.75rem, 1.4vw, 1.65rem);
+      flex-shrink: 0;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 1024px) {
       .nav-desktop {
         display: flex;
       }
     }
 
     .nav-link {
-      font-size: 0.925rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-muted);
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
 
     .nav-link:hover {
       color: var(--gold-primary);
     }
 
-    /* Mobile Hamburger */
+    /* Mobile / Tablet Touch Toggle Button (min 44px touch size) */
     .nav-toggle-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 42px;
-      height: 42px;
+      min-width: 44px;
+      min-height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: var(--radius-sm);
       color: var(--brand-navy);
       background: var(--bg-muted);
       border: 1px solid var(--border-light);
+      flex-shrink: 0;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 1024px) {
       .nav-toggle-btn {
         display: none;
       }
     }
 
-    /* Mobile Drawer */
+    /* Mobile Drawer with Safe Area Support */
     .mobile-menu-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(15, 23, 42, 0.5);
+      background: rgba(15, 23, 42, 0.55);
       backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       z-index: 2000;
       opacity: 0;
       visibility: hidden;
@@ -425,17 +457,20 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 82%;
-      max-width: 340px;
+      width: min(85%, 360px);
       height: 100%;
       background: #ffffff;
-      padding: 1.5rem;
+      padding: clamp(1.25rem, 4vw, 1.75rem);
+      padding-top: max(1.5rem, env(safe-area-inset-top));
+      padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
       display: flex;
       flex-direction: column;
       z-index: 2001;
       transform: translateX(100%);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .mobile-menu-overlay.active .mobile-menu-drawer {
@@ -446,7 +481,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
       padding-bottom: 0.75rem;
       border-bottom: 1px solid var(--border-light);
     }
@@ -454,14 +489,15 @@
     .mobile-nav-links {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem;
     }
 
     .mobile-nav-link {
       font-size: 1.05rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--brand-navy);
-      padding: 0.4rem 0;
+      padding: 0.75rem 0;
+      min-height: 44px;
       border-bottom: 1px solid var(--border-light);
       display: flex;
       align-items: center;
@@ -469,14 +505,13 @@
     }
 
     /* =======================================================================
-       HERO SECTION (BRIGHT, AIRY & COMPACT)
+       SECTION 1: HERO
        ======================================================================= */
     .hero-section {
       position: relative;
-      padding-top: 3.25rem;
-      padding-bottom: 3.75rem;
-      background: radial-gradient(circle at 85% 20%, rgba(200, 147, 50, 0.08) 0%, transparent 60%),
-                  radial-gradient(circle at 15% 80%, rgba(20, 42, 56, 0.04) 0%, transparent 50%),
+      padding-block: clamp(2.5rem, 5vw, 4rem);
+      background: radial-gradient(circle at 85% 15%, rgba(200, 147, 50, 0.08) 0%, transparent 55%),
+                  radial-gradient(circle at 10% 85%, rgba(20, 42, 56, 0.04) 0%, transparent 45%),
                   #ffffff;
       border-bottom: 1px solid var(--border-light);
     }
@@ -484,13 +519,13 @@
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2.75rem;
+      gap: clamp(2rem, 4vw, 3rem);
       align-items: center;
     }
 
     @media (min-width: 992px) {
       .hero-grid {
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: 1.15fr 0.85fr;
       }
     }
 
@@ -501,11 +536,12 @@
       background: var(--gold-light);
       border: 1px solid var(--gold-border);
       color: var(--gold-primary);
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 0.95rem;
       border-radius: var(--radius-full);
-      font-size: 0.825rem;
-      font-weight: 700;
+      font-size: clamp(0.75rem, 1.5vw, 0.825rem);
+      font-weight: 800;
       margin-bottom: 1.25rem;
+      max-width: 100%;
     }
 
     .hero-badge .pulse-dot {
@@ -513,29 +549,26 @@
       height: 7px;
       background: var(--gold-primary);
       border-radius: 50%;
+      flex-shrink: 0;
     }
 
     .hero-title {
-      font-size: 2.4rem;
+      font-size: clamp(1.85rem, 4.2vw + 0.5rem, 3.15rem);
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-      color: var(--brand-navy);
-    }
-
-    @media (min-width: 768px) {
-      .hero-title {
-        font-size: 3.25rem;
-      }
+      margin-bottom: 1.15rem;
+      color: #0f172a;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .hero-subtitle {
-      font-size: 1.125rem;
-      line-height: 1.6;
+      font-size: clamp(1rem, 1.2vw + 0.25rem, 1.125rem);
+      line-height: 1.65;
       color: var(--text-muted);
-      margin-bottom: 1.75rem;
-      max-width: 580px;
+      margin-bottom: 1.85rem;
     }
 
     .hero-cta-group {
@@ -545,7 +578,16 @@
       margin-bottom: 2rem;
     }
 
-    /* Credibility Bar */
+    @media (max-width: 480px) {
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+      }
+      .hero-cta-group .btn {
+        width: 100%;
+      }
+    }
+
     .hero-cred-bar {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -560,6 +602,12 @@
       }
     }
 
+    @media (max-width: 360px) {
+      .hero-cred-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .hero-cred-label {
       font-size: 0.725rem;
       text-transform: uppercase;
@@ -569,266 +617,375 @@
     }
 
     .hero-cred-value {
-      font-size: 0.925rem;
-      font-weight: 700;
+      font-size: clamp(0.85rem, 1.2vw + 0.2rem, 0.95rem);
+      font-weight: 800;
       color: var(--brand-navy);
     }
 
-    /* Founder Card (Bright & Dignified) */
-    .hero-card {
-      background: #ffffff;
-      border: 1px solid var(--gold-border);
+    .hero-visual-card {
+      position: relative;
       border-radius: var(--radius-xl);
-      padding: 1.75rem;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .founder-media-box {
-      width: 100%;
-      height: 220px;
-      border-radius: var(--radius-md);
       overflow: hidden;
-      margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-      position: relative;
-      border: 1px solid var(--border-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gold-border);
+      background: #ffffff;
+      width: 100%;
+      margin-inline: auto;
     }
 
-    .founder-media-box img {
+    .hero-visual-img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 4 / 3;
+      max-height: clamp(260px, 45vw, 420px);
       object-fit: cover;
+      display: block;
     }
 
-    .founder-illustration-placeholder {
+    .hero-floating-badge {
+      position: absolute;
+      bottom: clamp(0.75rem, 2.5vw, 1.25rem);
+      left: clamp(0.75rem, 2.5vw, 1.25rem);
+      right: clamp(0.75rem, 2.5vw, 1.25rem);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      padding: clamp(0.65rem, 1.8vw, 0.9rem) clamp(0.85rem, 2vw, 1.15rem);
+      box-shadow: var(--shadow-md);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1.25rem;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, #ffffff 0%, #f1f5f9 100%);
+      gap: 0.75rem;
     }
 
-    .founder-avatar-icon {
-      width: 54px;
-      height: 54px;
+    .hero-badge-icon {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: var(--gold-light);
       border: 1.5px solid var(--gold-primary);
+      color: var(--gold-primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--gold-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .founder-name-tag {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--brand-navy);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .founder-verified-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.725rem;
-      font-weight: 700;
-      color: var(--gold-primary);
-      background: var(--gold-light);
-      padding: 0.2rem 0.55rem;
-      border-radius: var(--radius-full);
-      border: 1px solid var(--gold-border);
-    }
-
-    .founder-title-tag {
-      font-size: 0.85rem;
-      color: var(--gold-primary);
-      font-weight: 700;
-      margin-top: 0.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .founder-desc-tag {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+      flex-shrink: 0;
     }
 
     /* =======================================================================
-       SERVICES SECTION (5 STRUCTURED BUSINESS ADVISORY SERVICES)
+       SECTION 2: FUNDING AND FELLOWSHIP OPPORTUNITIES
        ======================================================================= */
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .opportunities-section {
+      background: var(--bg-body);
+      border-bottom: 1px solid var(--border-light);
     }
 
-    @media (min-width: 640px) {
-      .services-grid {
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(1rem, 2vw, 1.5rem);
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .opportunities-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (min-width: 1024px) {
-      .services-grid {
+      .opportunities-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    .service-card {
-      background: var(--bg-card);
+    .opportunity-card {
+      background: #ffffff;
       border: 1px solid var(--border-light);
       border-radius: var(--radius-lg);
-      padding: 1.75rem;
+      padding: clamp(1.25rem, 2.5vw, 1.75rem);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s ease;
       box-shadow: var(--shadow-sm);
       position: relative;
+      min-width: 0; /* Prevents flexbox/grid overflow */
     }
 
-    .service-card:hover {
-      transform: translateY(-3px);
+    .opportunity-card:hover {
+      transform: translateY(-4px);
       border-color: var(--gold-border);
       box-shadow: var(--shadow-hover);
     }
 
-    .service-card.highlighted {
-      border: 2px solid var(--gold-primary);
-      background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
-    }
-
-    .service-popular-pill {
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      background: var(--gold-primary);
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-full);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .service-card-top {
-      margin-bottom: 1.25rem;
-    }
-
-    .service-header-row {
+    .opp-badge-row {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
     }
 
-    .service-badge-duration {
-      font-size: 0.75rem;
+    .opp-audience-tag {
+      font-size: 0.725rem;
       font-weight: 700;
       color: var(--brand-navy);
       background: var(--bg-muted);
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    .service-title {
-      font-size: 1.25rem;
+    .opportunity-card h3 {
+      font-size: clamp(1.15rem, 1.8vw, 1.3rem);
       font-weight: 800;
       color: var(--brand-navy);
       line-height: 1.3;
       margin-bottom: 0.5rem;
     }
 
-    .service-price-tag {
-      font-size: 1.65rem;
+    .opp-amount-highlight {
+      font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
       font-weight: 800;
       color: var(--gold-primary);
       margin-bottom: 0.75rem;
-      display: flex;
-      align-items: baseline;
-      gap: 0.35rem;
+      letter-spacing: -0.01em;
+      overflow-wrap: break-word;
     }
 
-    .service-price-tag span {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-subtle);
-    }
-
-    .service-description {
-      font-size: 0.925rem;
+    .opp-description {
+      font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.55;
       margin-bottom: 1.25rem;
     }
 
-    .service-extra-note {
-      font-size: 0.825rem;
-      color: var(--brand-navy);
+    .opp-disclaimer-note {
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      border-top: 1px dashed var(--border-light);
+      padding-top: 0.75rem;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .trust-disclaimer-banner {
       background: var(--gold-light);
-      border-left: 3px solid var(--gold-primary);
-      padding: 0.5rem 0.75rem;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin-bottom: 1.25rem;
-      line-height: 1.45;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 2vw, 1.25rem) clamp(1.15rem, 2.5vw, 1.5rem);
+      font-size: 0.875rem;
+      color: #78350f;
+      line-height: 1.55;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
     }
 
     /* =======================================================================
-       WHY FOUNDER CAPITAL (CREDIBILITY & 100+ PITCH EXPERIENCE)
+       SECTION 3: HOW FOUNDER CAPITAL HELPS
+       ======================================================================= */
+    .how-helps-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .services-5-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .services-5-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-5-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Tablet aesthetic: center 5th card on 2-col layout */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .service-card-pillar:last-child {
+        grid-column: span 2;
+        max-width: 580px;
+        margin-inline: auto;
+        width: 100%;
+      }
+    }
+
+    .service-card-pillar {
+      background: var(--bg-body);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: clamp(1.25rem, 2vw, 1.65rem);
+      transition: all 0.22s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .service-card-pillar:hover {
+      background: #ffffff;
+      border-color: var(--gold-border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .service-pillar-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      border: 1.5px solid var(--gold-primary);
+      color: var(--gold-primary);
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+
+    .service-card-pillar h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 0.45rem;
+      line-height: 1.35;
+    }
+
+    .service-card-pillar p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* =======================================================================
+       SECTION 4: INTERNATIONAL SPEAKING AND GLOBAL OPPORTUNITIES
+       ======================================================================= */
+    .speaking-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .speaking-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 4vw, 3rem);
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .speaking-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .speaking-media-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gold-border);
+      width: 100%;
+    }
+
+    .speaking-media-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      max-height: clamp(260px, 45vw, 440px);
+      object-fit: cover;
+      display: block;
+    }
+
+    .speaking-media-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(15, 28, 36, 0.92) 80%);
+      padding: clamp(1rem, 2.5vw, 1.75rem) clamp(1rem, 2.5vw, 1.5rem) 1.25rem clamp(1rem, 2.5vw, 1.5rem);
+      color: #ffffff;
+    }
+
+    .speaking-areas-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .speaking-area-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: clamp(0.9rem, 1.2vw + 0.15rem, 0.95rem);
+      color: var(--brand-navy);
+      line-height: 1.5;
+    }
+
+    .speaking-check {
+      color: var(--gold-primary);
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    /* =======================================================================
+       SECTION 5: WHY FOUNDER CAPITAL
        ======================================================================= */
     .why-section {
-      background: #ffffff;
-      border-top: 1px solid var(--border-light);
+      background: var(--bg-body);
       border-bottom: 1px solid var(--border-light);
     }
 
     .why-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 540px) {
       .why-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 900px) {
       .why-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1180px) {
+      .why-grid {
+        grid-template-columns: repeat(5, 1fr);
       }
     }
 
     .why-card {
-      background: var(--bg-body);
+      background: #ffffff;
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
-      padding: 1.5rem;
-      transition: all 0.2s ease;
-    }
-
-    .why-card:hover {
-      border-color: var(--gold-border);
-      background: #ffffff;
+      padding: clamp(1.25rem, 2vw, 1.5rem) 1.25rem;
       box-shadow: var(--shadow-sm);
+      min-width: 0;
     }
 
-    .why-number {
+    .why-card-num {
       font-size: 1.5rem;
       font-weight: 800;
       color: var(--gold-primary);
@@ -836,161 +993,38 @@
       margin-bottom: 0.5rem;
     }
 
-    .why-card-title {
-      font-size: 1.1rem;
-      font-weight: 700;
+    .why-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
       color: var(--brand-navy);
       margin-bottom: 0.45rem;
+      line-height: 1.35;
     }
 
-    .why-card-text {
-      font-size: 0.875rem;
+    .why-card p {
+      font-size: 0.85rem;
       color: var(--text-muted);
       line-height: 1.55;
     }
 
     /* =======================================================================
-       HOW IT WORKS (CONCISE 4-STEP ADVISORY PROCESS)
-       ======================================================================= */
-    .how-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    @media (min-width: 640px) {
-      .how-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .how-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .how-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 1.35rem;
-      position: relative;
-    }
-
-    .how-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--gold-primary);
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 0.8rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .how-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--brand-navy);
-      margin-bottom: 0.35rem;
-    }
-
-    .how-text {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    .verified-policy-banner {
-      margin-top: 2rem;
-      background: var(--gold-light);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-md);
-      padding: 1.15rem 1.35rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      font-size: 0.875rem;
-      color: #78350f;
-    }
-
-    /* =======================================================================
-       PRICING SHEET TABLE
-       ======================================================================= */
-    .pricing-table-card {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      box-shadow: var(--shadow-sm);
-      overflow-x: auto;
-    }
-
-    .advisory-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
-
-    .advisory-table th {
-      padding: 0.85rem 1rem;
-      font-size: 0.775rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gold-primary);
-      border-bottom: 2px solid var(--border-light);
-    }
-
-    .advisory-table td {
-      padding: 1rem;
-      border-bottom: 1px solid var(--border-light);
-      font-size: 0.925rem;
-    }
-
-    .advisory-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .advisory-table tr:hover td {
-      background: var(--bg-body);
-    }
-
-    .price-col {
-      font-weight: 800;
-      color: var(--gold-primary);
-      white-space: nowrap;
-      font-size: 1.05rem;
-    }
-
-    /* =======================================================================
-       BOOKING & MOBILE MONEY PAYMENT SECTION
+       SECTION 6: CONSULTATION BOOKING & PAYMENT SECTION
        ======================================================================= */
     .booking-section {
       background: #ffffff;
-      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
     }
 
-    .booking-card {
+    .booking-box {
+      max-width: 900px;
+      margin: 0 auto;
       background: #ffffff;
       border: 1px solid var(--border-light);
       border-radius: var(--radius-xl);
-      padding: 2.25rem;
+      padding: clamp(1.25rem, 4vw, 2.25rem);
       box-shadow: var(--shadow-lg);
-      max-width: 880px;
-      margin: 0 auto;
     }
 
-    @media (max-width: 640px) {
-      .booking-card {
-        padding: 1.35rem 1rem;
-      }
-    }
-
-    /* Form Inputs */
     .form-group {
       margin-bottom: 1.35rem;
     }
@@ -1007,21 +1041,16 @@
       color: var(--gold-primary);
     }
 
-    .form-hint {
-      font-size: 0.75rem;
-      color: var(--text-subtle);
-      margin-top: 0.35rem;
-    }
-
     .form-control {
       width: 100%;
       background: #ffffff;
       border: 1px solid #cbd5e1;
       border-radius: var(--radius-sm);
-      padding: 0.75rem 0.95rem;
+      padding: 0.85rem 1rem;
       color: var(--text-main);
-      font-size: 0.95rem;
+      font-size: 1rem; /* >= 16px strictly avoids iOS Safari zoom */
       transition: all 0.2s ease;
+      min-height: 48px;
     }
 
     .form-control:focus {
@@ -1047,62 +1076,66 @@
       }
     }
 
-    /* Service Selector Chips */
-    .service-chips-grid {
+    /* Track selector chips */
+    .tracks-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.65rem;
+      gap: 0.75rem;
       margin-bottom: 1.25rem;
     }
 
     @media (min-width: 640px) {
-      .service-chips-grid {
+      .tracks-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    .service-chip-card {
+    .track-chip {
       background: var(--bg-body);
       border: 1.5px solid var(--border-light);
       border-radius: var(--radius-md);
-      padding: 0.85rem 1rem;
+      padding: 0.95rem 1rem;
+      min-height: 52px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 0.75rem;
       transition: all 0.2s ease;
       user-select: none;
     }
 
-    .service-chip-card:hover {
+    .track-chip:hover {
       border-color: var(--gold-border);
       background: #ffffff;
     }
 
-    .service-chip-card.selected {
+    .track-chip.selected {
       border-color: var(--gold-primary);
       background: var(--gold-light);
       box-shadow: 0 0 0 1px var(--gold-primary);
     }
 
-    .chip-name {
+    .track-title {
       font-size: 0.875rem;
       font-weight: 700;
       color: var(--brand-navy);
+      line-height: 1.3;
     }
 
-    .chip-price {
-      font-size: 0.85rem;
+    .track-price {
+      font-size: 0.9rem;
       font-weight: 800;
       color: var(--gold-primary);
+      white-space: nowrap;
     }
 
-    /* Price Summary Box */
+    /* Price summary banner */
     .price-summary-banner {
       background: #ffffff;
       border: 1.5px solid var(--gold-border);
       border-radius: var(--radius-md);
-      padding: 1.25rem 1.5rem;
+      padding: 1.25rem clamp(1rem, 2.5vw, 1.5rem);
       margin-bottom: 1.75rem;
       display: flex;
       flex-direction: column;
@@ -1118,31 +1151,17 @@
       }
     }
 
-    .price-summary-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--brand-navy);
-    }
-
-    .price-summary-duration {
-      font-size: 0.825rem;
-      color: var(--text-muted);
-    }
-
-    .price-summary-amount {
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--gold-primary);
-      letter-spacing: -0.02em;
-      text-align: right;
-    }
-
-    /* Mobile Money Selector (Airtel & MTN) */
     .provider-selection-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0.75rem;
       margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 360px) {
+      .provider-selection-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     .provider-pill-btn {
@@ -1151,6 +1170,7 @@
       justify-content: center;
       gap: 0.6rem;
       padding: 0.85rem;
+      min-height: 48px;
       background: var(--bg-body);
       border: 2px solid var(--border-light);
       border-radius: var(--radius-md);
@@ -1158,10 +1178,6 @@
       font-weight: 700;
       color: var(--brand-navy);
       transition: all 0.2s ease;
-    }
-
-    .provider-pill-btn:hover {
-      border-color: #cbd5e1;
     }
 
     .provider-pill-btn.active {
@@ -1182,31 +1198,14 @@
     .badge-airtel { background: #e11900; }
     .badge-mtn { background: #ffcc00; color: #000; }
 
-    /* Payment Instructions Card */
     .payment-instruction-box {
       background: var(--bg-body);
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
-      padding: 1.35rem;
+      padding: clamp(1rem, 2.5vw, 1.35rem);
       margin-bottom: 1.75rem;
     }
 
-    .instruction-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .instruction-header h5 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--brand-navy);
-    }
-
-    /* Copyable Recipient Details */
     .copyable-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1228,40 +1227,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .copyable-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-subtle);
-      font-weight: 700;
-    }
-
-    .copyable-value {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--brand-navy);
-      font-family: monospace;
+      gap: 0.5rem;
     }
 
     .copy-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
-      font-size: 0.725rem;
+      gap: 0.35rem;
+      min-height: 40px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.75rem;
       font-weight: 700;
       color: var(--gold-primary);
       background: var(--gold-light);
       border: 1px solid var(--gold-border);
-      padding: 0.3rem 0.65rem;
       border-radius: var(--radius-sm);
       transition: all 0.2s ease;
-    }
-
-    .copy-btn:hover {
-      background: var(--gold-primary);
-      color: #fff;
+      flex-shrink: 0;
     }
 
     .copy-btn.copied {
@@ -1270,25 +1252,24 @@
       border-color: #10b981;
     }
 
-    /* Instructions Step List */
     .inst-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      font-size: 0.85rem;
+      gap: 0.6rem;
+      font-size: 0.875rem;
       color: var(--text-muted);
     }
 
     .inst-list li {
       display: flex;
       align-items: flex-start;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
     .inst-step-num {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background: #e2e8f0;
       color: var(--brand-navy);
@@ -1301,42 +1282,21 @@
       margin-top: 0.1rem;
     }
 
-    /* WhatsApp Submission Area */
     .whatsapp-submit-card {
       background: #ffffff;
       border: 1.5px solid #86efac;
       border-radius: var(--radius-md);
-      padding: 1.5rem;
+      padding: clamp(1rem, 2.5vw, 1.5rem);
       margin-top: 1.5rem;
       box-shadow: 0 4px 14px rgba(34, 197, 94, 0.08);
     }
 
-    .whatsapp-header-box {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .whatsapp-circle {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #25d366;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    /* Live Status Confirmation Card (Shown dynamically after submission) */
     .verification-status-card {
       display: none;
       background: var(--gold-light);
       border: 1.5px solid var(--gold-border);
       border-radius: var(--radius-md);
-      padding: 1.75rem;
+      padding: 1.5rem;
       text-align: center;
       margin-top: 1.5rem;
       animation: fadeIn 0.3s ease;
@@ -1348,10 +1308,37 @@
     }
 
     /* =======================================================================
-       FAQ ACCORDION
+       PRICING TABLE COMPONENT
+       ======================================================================= */
+    .pricing-table-container {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: clamp(1rem, 2vw, 1.75rem);
+      box-shadow: var(--shadow-sm);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-scroll-hint {
+      display: none;
+      font-size: 0.75rem;
+      color: var(--text-subtle);
+      margin-bottom: 0.75rem;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .table-scroll-hint {
+        display: block;
+      }
+    }
+
+    /* =======================================================================
+       SECTION 7: FAQ
        ======================================================================= */
     .faq-container {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -1369,11 +1356,13 @@
     .faq-question-btn {
       width: 100%;
       text-align: left;
-      padding: 1.15rem 1.35rem;
+      padding: clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2.5vw, 1.45rem);
+      min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 1rem;
+      gap: 0.75rem;
+      font-size: clamp(0.925rem, 1.2vw + 0.2rem, 1rem);
       font-weight: 700;
       color: var(--brand-navy);
       background: none;
@@ -1387,6 +1376,7 @@
     .faq-arrow {
       color: var(--gold-primary);
       transition: transform 0.25s ease;
+      flex-shrink: 0;
     }
 
     .faq-item.open .faq-arrow {
@@ -1397,33 +1387,25 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
-      padding: 0 1.35rem;
+      padding-inline: clamp(1rem, 2.5vw, 1.45rem);
       color: var(--text-muted);
       font-size: 0.925rem;
       line-height: 1.6;
     }
 
     .faq-item.open .faq-answer {
-      max-height: 280px;
-      padding-bottom: 1.25rem;
+      max-height: 400px;
+      padding-bottom: clamp(1rem, 2vw, 1.35rem);
     }
 
     /* =======================================================================
-       FINAL CTA & FOOTER
+       SECTION 8: FOOTER
        ======================================================================= */
-    .final-cta-section {
-      background: linear-gradient(180deg, #ffffff 0%, var(--bg-body) 100%);
-      border-top: 1px solid var(--border-light);
-      text-align: center;
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem;
-    }
-
     .site-footer {
       background: #ffffff;
       border-top: 1px solid var(--border-light);
-      padding-top: 3.5rem;
-      padding-bottom: 2rem;
+      padding-top: clamp(2.5rem, 5vw, 4rem);
+      padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
       font-size: 0.875rem;
       color: var(--text-muted);
     }
@@ -1431,13 +1413,13 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-bottom: 2.75rem;
+      gap: clamp(1.75rem, 3.5vw, 2.5rem);
+      margin-bottom: 2.5rem;
     }
 
     @media (min-width: 768px) {
       .footer-grid {
-        grid-template-columns: 1.7fr 1fr 1fr;
+        grid-template-columns: 1.8fr 1fr 1fr;
       }
     }
 
@@ -1457,13 +1439,28 @@
       gap: 0.6rem;
     }
 
+    .footer-links a {
+      display: inline-block;
+      padding: 0.15rem 0;
+    }
+
     .footer-links a:hover {
       color: var(--gold-primary);
     }
 
-    .footer-bottom {
+    .footer-disclaimer-box {
       border-top: 1px solid var(--border-light);
       padding-top: 1.5rem;
+      margin-top: 1.75rem;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      line-height: 1.6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.25rem;
+      margin-top: 1.25rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1471,19 +1468,53 @@
       gap: 0.75rem;
       font-size: 0.825rem;
       color: var(--text-subtle);
+      text-align: center;
     }
 
     @media (min-width: 768px) {
       .footer-bottom {
         flex-direction: row;
+        text-align: left;
       }
     }
 
-    /* Toast */
+    /* Mobile Quick Persistent Bar with Safe Area Support */
+    .mobile-quick-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid var(--gold-border);
+      padding: 0.65rem clamp(1rem, 3vw, 1.25rem);
+      padding-bottom: max(0.65rem, env(safe-area-inset-bottom, 0.65rem));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      z-index: 999;
+      box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .mobile-quick-cta-bar.hidden {
+      transform: translateY(100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-quick-cta-bar {
+        display: none !important;
+      }
+    }
+
     .toast-notice {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
+      bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+      right: 1.25rem;
       background: var(--brand-navy);
       color: #ffffff;
       padding: 0.65rem 1.15rem;
@@ -1505,6 +1536,16 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Reduced Motion Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1515,36 +1556,41 @@
   <header class="site-header" id="header">
     <div class="container header-inner">
       
-      <!-- Logo -->
-      <a href="#hero" class="brand-logo-wrap" aria-label="Founder Capital Home">
-        <img 
-          src="assets/images/founder-capital-logo.png" 
-          alt="Founder Capital Logo" 
-          class="brand-logo-img" 
-          id="siteLogoImg"
-          onerror="handleLogoError(this)" 
-        />
-        <div class="brand-logo-fallback" id="siteLogoFallback" style="display: none;">
-          <div class="brand-mark">F</div>
-          <div class="brand-text">FOUNDER <span>CAPITAL</span></div>
-        </div>
-      </a>
+      <!-- Brand & Tagline -->
+      <div class="brand-identity">
+        <a href="#hero" aria-label="Founder Capital Home" style="display: flex; align-items: center; gap: 0.5rem;">
+          <img 
+            src="assets/images/founder-capital-logo.png" 
+            alt="Founder Capital Logo" 
+            class="brand-logo-img" 
+            id="siteLogoImg"
+            width="170"
+            height="40"
+            onerror="handleLogoError(this)" 
+          />
+          <div class="brand-logo-fallback" id="siteLogoFallback" style="display: none;">
+            <div class="brand-mark">F</div>
+            <div class="brand-text">FOUNDER <span>CAPITAL</span></div>
+          </div>
+        </a>
+      </div>
 
       <!-- Desktop Nav -->
       <nav class="nav-desktop" aria-label="Main Navigation">
-        <a href="#services" class="nav-link">Advisory Services</a>
+        <a href="#funding-opportunities" class="nav-link">Funding & Grants</a>
+        <a href="#how-we-help" class="nav-link">How We Help</a>
+        <a href="#global-speaking" class="nav-link">Global Speaking</a>
         <a href="#why-us" class="nav-link">Why Founder Capital</a>
-        <a href="#how-it-works" class="nav-link">How It Works</a>
-        <a href="#pricing" class="nav-link">Pricing Sheet</a>
+        <a href="#pricing-sheet" class="nav-link">Pricing Sheet</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#booking" class="btn btn-gold btn-sm">
-          <span>Book a Discovery Call</span>
+          <span>BOOK A CALL</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </nav>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="nav-toggle-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu">
+      <!-- Mobile / Tablet Hamburger Button -->
+      <button class="nav-toggle-btn" id="mobileMenuOpenBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobileMenuOverlay">
         <svg class="icon" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
 
@@ -1555,26 +1601,30 @@
   <div class="mobile-menu-overlay" id="mobileMenuOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
     <div class="mobile-menu-drawer">
       <div class="mobile-menu-header">
-        <div class="brand-text" style="font-size: 1rem;">FOUNDER <span>CAPITAL</span></div>
+        <div class="brand-text" style="font-size: 0.95rem;">FOUNDER <span>CAPITAL</span></div>
         <button class="nav-toggle-btn" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu">
           <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="mobile-nav-links">
-        <a href="#services" class="mobile-nav-link" data-close-menu>
-          <span>Advisory Services</span>
+        <a href="#funding-opportunities" class="mobile-nav-link" data-close-menu>
+          <span>Funding & Fellowships</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+        <a href="#how-we-help" class="mobile-nav-link" data-close-menu>
+          <span>How We Help</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
+        <a href="#global-speaking" class="mobile-nav-link" data-close-menu>
+          <span>International Speaking</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
         </a>
         <a href="#why-us" class="mobile-nav-link" data-close-menu>
           <span>Why Founder Capital</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
         </a>
-        <a href="#how-it-works" class="mobile-nav-link" data-close-menu>
-          <span>How It Works</span>
-          <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-        </a>
-        <a href="#pricing" class="mobile-nav-link" data-close-menu>
-          <span>Pricing Sheet</span>
+        <a href="#pricing-sheet" class="mobile-nav-link" data-close-menu>
+          <span>Advisory Pricing Sheet</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
         </a>
         <a href="#faq" class="mobile-nav-link" data-close-menu>
@@ -1583,7 +1633,7 @@
         </a>
         <div style="margin-top: 1.5rem;">
           <a href="#booking" class="btn btn-gold btn-block" data-close-menu>
-            <span>Book a Discovery Call</span>
+            <span>BOOK A CALL</span>
             <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -1593,7 +1643,7 @@
 
   <main>
     <!-- ======================================================================= -->
-    <!-- B. HERO SECTION (BRIGHT, AIRY & COMPACT)                                -->
+    <!-- SECTION 1: HERO — ABOVE THE FOLD                                        -->
     <!-- ======================================================================= -->
     <section class="hero-section" id="hero">
       <div class="container">
@@ -1603,78 +1653,66 @@
           <div class="hero-content">
             <div class="hero-badge">
               <span class="pulse-dot"></span>
-              <span>Structured Business Advisory for Zambian Founders</span>
+              <span>Your Vision. Our Guidance. Your Growth.</span>
             </div>
             
             <h1 class="hero-title">
-              Build Smarter.<br />
-              Find Opportunities.<br />
-              <span class="text-gold">Grow With Confidence.</span>
+              HAVE A BUSINESS OR INNOVATION THAT <span class="text-teal">NEEDS FUNDING?</span>
             </h1>
 
             <p class="hero-subtitle">
-              Structured 1-on-1 business advisory for entrepreneurs ready to refine their ideas, review financials, prepare winning fellowship & grant applications, and pitch to global investors.
+              Your business idea could be the beginning of something bigger. Discover funding, grants, fellowships and international opportunities that could help you grow.<br /><br />
+              At Founder Capital, we help entrepreneurs identify relevant opportunities, strengthen applications and position their ideas for greater impact.
             </p>
 
             <div class="hero-cta-group">
               <a href="#booking" class="btn btn-gold">
-                <span>Book a Discovery Call</span>
+                <span>BOOK A CALL</span>
                 <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="#pricing" class="btn btn-secondary">
-                <span>View Advisory Rates</span>
+              <a href="#how-we-help" class="btn btn-secondary">
+                <span>EXPLORE OUR SERVICES</span>
               </a>
             </div>
 
             <!-- Credibility Bar -->
             <div class="hero-cred-bar">
               <div class="hero-cred-item">
-                <span class="hero-cred-label">Venture Founder</span>
-                <span class="hero-cred-value">Safe Motherhood Alliance</span>
+                <span class="hero-cred-label">Global Access</span>
+                <span class="hero-cred-value">Grants & Fellowships</span>
               </div>
               <div class="hero-cred-item">
-                <span class="hero-cred-label">Pitch Mastery</span>
-                <span class="hero-cred-value">100+ Pitches Delivered</span>
+                <span class="hero-cred-label">Visibility</span>
+                <span class="hero-cred-value">International Stages</span>
               </div>
               <div class="hero-cred-item">
-                <span class="hero-cred-label">Direct Guidance</span>
-                <span class="hero-cred-value">1-on-1 Structured Advisory</span>
+                <span class="hero-cred-label">Advisory</span>
+                <span class="hero-cred-value">1-on-1 Founder Support</span>
               </div>
             </div>
           </div>
 
-          <!-- Hero Founder Showcase Card -->
-          <div class="hero-card">
-            <div class="founder-media-box">
-              <img 
-                src="assets/images/founder-portrait.jpg" 
-                alt="Muzalema Mwanza - Lead Mentor, Founder Capital" 
-                id="founderImg"
-                onerror="this.src='/src/assets/images/founder_portrait_1793048795150.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('founderFallbackCard').style.display='flex';}" 
-              />
-              <div class="founder-illustration-placeholder" id="founderFallbackCard">
-                <div class="founder-avatar-icon">
-                  <svg class="icon" style="width: 28px; height: 28px;" viewBox="0 0 24 24">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
-                </div>
-                <div style="font-weight: 800; color: var(--brand-navy); font-size: 0.95rem;">Muzalema Mwanza</div>
-                <div style="font-size: 0.775rem; color: var(--gold-primary); font-weight: 700; margin-top: 0.2rem;">Lead Mentor & Advisor</div>
+          <!-- Hero Visual: Young African Entrepreneur Working on Venture -->
+          <div class="hero-visual-card">
+            <img 
+              src="assets/images/hero-entrepreneur.jpg" 
+              alt="Young African entrepreneur planning venture growth and reviewing business strategy" 
+              class="hero-visual-img" 
+              width="800"
+              height="600"
+              fetchpriority="high"
+              decoding="async"
+              onerror="this.src='public/assets/images/hero-entrepreneur.jpg'"
+            />
+            <div class="hero-floating-badge">
+              <div class="hero-badge-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <div style="font-size: 0.875rem; font-weight: 800; color: var(--brand-navy);">Navigating Global Opportunities</div>
+                <div style="font-size: 0.775rem; color: var(--gold-primary); font-weight: 700;">From Local Traction to International Impact</div>
               </div>
             </div>
-
-            <div class="founder-name-tag">
-              <span>Muzalema Mwanza</span>
-              <span class="founder-verified-badge">
-                <svg class="icon" style="width: 12px; height: 12px;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Lead Mentor</span>
-              </span>
-            </div>
-            <div class="founder-title-tag">Founder, Safe Motherhood Alliance</div>
-            <p class="founder-desc-tag">
-              Fellow & Grantee across international programmes (including <strong>Echoing Green</strong> & the <strong>Africa Prize</strong>). Delivered over <strong>100 pitches</strong> to global judges and investors.
-            </p>
           </div>
 
         </div>
@@ -1682,72 +1720,353 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- C. SERVICES SECTION (5 STRUCTURED SERVICES FROM PROPOSED SHEET)         -->
+    <!-- SECTION 2: FUNDING AND FELLOWSHIP OPPORTUNITIES                          -->
     <!-- ======================================================================= -->
-    <section class="section-padding" id="services" style="background: var(--bg-body);">
+    <section class="section-padding opportunities-section" id="funding-opportunities">
       <div class="container">
         
         <div class="section-header">
-          <div class="section-eyebrow">Structured Advisory Services</div>
-          <h2 class="section-title">Focused Sessions Designed for Growth</h2>
+          <div class="section-eyebrow">International Grants & Fellowships</div>
+          <h2 class="section-title">FUNDING OPPORTUNITIES EXIST. <span class="text-teal">LET'S HELP YOU FIND THE RIGHT FIT.</span></h2>
           <p class="section-description">
-            Choose the exact advisory track you need right now. Every session is structured, confidential, and focused on clear next steps.
+            International programmes support entrepreneurs, innovators and social impact businesses with funding, mentorship, fellowships and professional networks. Finding suitable programmes and presenting a compelling application can be challenging. Founder Capital helps you navigate the process with practical, personalised guidance.
           </p>
         </div>
 
-        <div class="services-grid" id="servicesGrid">
-          <!-- Dynamically populated from JavaScript configuration -->
+        <!-- 6 High-Impact Programme Cards -->
+        <div class="opportunities-grid">
+          
+          <!-- 1. Echoing Green -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Social Entrepreneurs</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Global Fellowship</span>
+              </div>
+              <h3>Echoing Green Fellowship</h3>
+              <div class="opp-amount-highlight">Up to US$100,000</div>
+              <p class="opp-description">
+                Unrestricted seed funding, leadership development, executive coaching, and lifetime access to a worldwide network of high-impact leaders.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Subject to applicable fellowship terms, eligibility, and selection cycles.
+            </div>
+          </div>
+
+          <!-- 2. Tony Elumelu Foundation -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">African Entrepreneurs</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Seed Capital</span>
+              </div>
+              <h3>Tony Elumelu Foundation</h3>
+              <div class="opp-amount-highlight">US$5,000 Seed Capital</div>
+              <p class="opp-description">
+                Non-refundable seed funding, 12 weeks of intensive business management training, and mentorship for selected eligible African entrepreneurs across 54 countries.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Under applicable TEF cycle terms and eligibility criteria.
+            </div>
+          </div>
+
+          <!-- 3. Bayer Foundation -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Women-Led Impact</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Empowerment Award</span>
+              </div>
+              <h3>Bayer Foundation Award</h3>
+              <div class="opp-amount-highlight">€25,000 in Funding</div>
+              <p class="opp-description">
+                Financial awards, tailored accelerator coaching, and global network visibility for female impact innovators driving breakthrough solutions in health and nutrition.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Subject to applicable award category and annual cycle guidelines.
+            </div>
+          </div>
+
+          <!-- 4. Cartier Women's Initiative -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Women Entrepreneurs</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Grant Programme</span>
+              </div>
+              <h3>Cartier Women's Initiative</h3>
+              <div class="opp-amount-highlight">US$30,000 – US$100,000</div>
+              <p class="opp-description">
+                Major grant funding, executive leadership education, peer community support, and international media exposure for impact businesses addressing UN Sustainable Development Goals.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Award tier depends on regional and topical category placement.
+            </div>
+          </div>
+
+          <!-- 5. Ashoka Fellowship -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Systemic Change</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Lifetime Fellowship</span>
+              </div>
+              <h3>Ashoka Fellowship</h3>
+              <div class="opp-amount-highlight">Fellowship & Global Network</div>
+              <p class="opp-description">
+                Tailored financial stipend support, global peer networks, strategic partnership introductions, and pro-bono legal/business resources for systemic social entrepreneurs.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Stipend and support structured based on individual founder needs.
+            </div>
+          </div>
+
+          <!-- 6. MIT Solve -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Tech & Innovation</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Global Challenges</span>
+              </div>
+              <h3>MIT Solve Global Challenges</h3>
+              <div class="opp-amount-highlight">Challenge-Based Funding</div>
+              <p class="opp-description">
+                Access to over US$1,000,000 in pooled challenge funding annually, 9-month solver incubator programme, and strategic partnerships across the MIT ecosystem.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Award amounts and categories vary by specific annual challenge.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action Button -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <a href="#booking" class="btn btn-gold" style="padding: 0.95rem 2.2rem; font-size: 1rem;">
+            <span>EXPLORE FUNDING OPPORTUNITIES</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Required Disclaimer Banner -->
+        <div class="trust-disclaimer-banner">
+          <svg class="icon" style="color: #b45309; flex-shrink: 0;" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <div>
+            <strong>Funding and Independence Disclaimer:</strong> Funding and fellowship opportunities are competitive, subject to eligibility requirements and application cycles, and are not guaranteed. Award amounts, eligibility and availability may change. Founder Capital is an independent advisory service and is not affiliated with, endorsed by or acting on behalf of the programmes listed.
+          </div>
         </div>
 
       </div>
     </section>
 
     <!-- ======================================================================= -->
-    <!-- D. WHY FOUNDER CAPITAL                                                  -->
+    <!-- SECTION 3: HOW FOUNDER CAPITAL HELPS                                    -->
+    <!-- ======================================================================= -->
+    <section class="section-padding how-helps-section" id="how-we-help">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">Strategic Advisory Pillars</div>
+          <h2 class="section-title">NOT SURE WHERE TO START OR <span class="text-teal">HOW TO MAKE YOUR APPLICATION STAND OUT?</span></h2>
+          <p class="section-description">
+            You do not have to navigate the opportunities alone. We provide practical guidance to help you identify relevant programmes and present your business or innovation more effectively.
+          </p>
+        </div>
+
+        <div class="services-5-grid">
+          
+          <!-- Pillar 1 -->
+          <div class="service-card-pillar">
+            <div>
+              <div class="service-pillar-num">1</div>
+              <h3>Opportunity Identification</h3>
+              <p>Explore funding, grants and fellowships aligned with your business, innovation or social impact mission.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="service-card-pillar">
+            <div>
+              <div class="service-pillar-num">2</div>
+              <h3>Application Strategy</h3>
+              <p>Understand programme requirements, eligibility, selection rubrics and funder scoring criteria.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="service-card-pillar">
+            <div>
+              <div class="service-pillar-num">3</div>
+              <h3>Application Review</h3>
+              <p>Strengthen your written application, business narrative, theory of change and supporting documentation.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="service-card-pillar">
+            <div>
+              <div class="service-pillar-num">4</div>
+              <h3>Pitch & Interview Preparation</h3>
+              <p>Prepare to communicate your idea confidently to selection panels, juries, and potential partners.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="service-card-pillar">
+            <div>
+              <div class="service-pillar-num">5</div>
+              <h3>Impact Communication</h3>
+              <p>Articulate your vision, business model, traction results and scalable potential for long-term growth.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center;">
+          <a href="#booking" class="btn btn-gold" style="padding: 0.9rem 2rem;">
+            <span>LET'S STRENGTHEN YOUR APPLICATION</span>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 4: INTERNATIONAL SPEAKING AND GLOBAL OPPORTUNITIES              -->
+    <!-- ======================================================================= -->
+    <section class="section-padding speaking-section" id="global-speaking">
+      <div class="container">
+        <div class="speaking-grid">
+          
+          <!-- Image: Confident Young African Speaker on International Stage -->
+          <div class="speaking-media-card">
+            <img 
+              src="assets/images/global-speaker.jpg" 
+              alt="Young African founder speaking confidently with microphone on international summit stage" 
+              class="speaking-media-img"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+              onerror="this.src='public/assets/images/global-speaker.jpg'"
+            />
+            <div class="speaking-media-overlay">
+              <div style="font-size: 0.775rem; text-transform: uppercase; font-weight: 800; color: var(--gold-accent); letter-spacing: 0.1em; margin-bottom: 0.25rem;">
+                Global Positioning
+              </div>
+              <div style="font-size: clamp(1rem, 1.5vw, 1.15rem); font-weight: 800; line-height: 1.3;">
+                Your idea. Your story. Your opportunity to be heard.
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <div class="section-eyebrow">International Visibility & Panels</div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">
+              YOUR IDEA DESERVES TO BE <span class="text-teal">HEARD BEYOND YOUR BORDERS.</span>
+            </h2>
+            
+            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem;">
+              Have you ever imagined speaking at an international conference, joining a global panel discussion, sharing your innovation with a wider audience or connecting with investors and partners from around the world?
+            </p>
+            
+            <p style="font-size: 0.975rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+              You may already have an important idea, a compelling story or an initiative with the potential to make a difference. The next step is learning how to position yourself for the right opportunities. Founder Capital helps entrepreneurs, innovators and social impact founders prepare for international visibility.
+            </p>
+
+            <ul class="speaking-areas-list">
+              <li class="speaking-area-item">
+                <span class="speaking-check">&#10003;</span>
+                <span>Identify relevant international conferences, summits and speaking opportunities.</span>
+              </li>
+              <li class="speaking-area-item">
+                <span class="speaking-check">&#10003;</span>
+                <span>Develop a compelling founder story, professional biography and speaker profile.</span>
+              </li>
+              <li class="speaking-area-item">
+                <span class="speaking-check">&#10003;</span>
+                <span>Communicate your mission and innovation persuasively to international audiences.</span>
+              </li>
+              <li class="speaking-area-item">
+                <span class="speaking-check">&#10003;</span>
+                <span>Prepare for panel discussions, keynote sessions and high-stakes pitching rounds.</span>
+              </li>
+              <li class="speaking-area-item">
+                <span class="speaking-check">&#10003;</span>
+                <span>Explore relevant investor networks, strategic partnerships and global communities.</span>
+              </li>
+            </ul>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="#booking" class="btn btn-gold" style="align-self: flex-start; padding: 0.85rem 1.85rem;">
+                <span>BOOK A CALL</span>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <span style="font-size: 0.775rem; color: var(--text-subtle); font-style: italic;">
+                * Founder Capital provides advisory and preparation support; we do not guarantee invitations, speaking fees, or travel funding.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 5: WHY FOUNDER CAPITAL?                                         -->
     <!-- ======================================================================= -->
     <section class="section-padding why-section" id="why-us">
       <div class="container">
         
         <div class="section-header">
-          <div class="section-eyebrow">The Founder Advantage</div>
-          <h2 class="section-title">Why Founders Choose Founder Capital</h2>
+          <div class="section-eyebrow">Proven Perspective</div>
+          <h2 class="section-title">PRACTICAL GUIDANCE. <span class="text-teal">BIGGER POSSIBILITIES.</span></h2>
           <p class="section-description">
-            Move past abstract theory. Work directly with an advisor who understands local operational realities and international funding criteria.
+            Founder Capital combines real-world entrepreneurial lessons with structured advisory frameworks to help founders navigate opportunities strategically and purposefully.
           </p>
         </div>
 
         <div class="why-grid">
           
           <div class="why-card">
-            <div class="why-number">01</div>
-            <h3 class="why-card-title">Real Grassroots Traction</h3>
-            <p class="why-card-text">
-              Direct lessons from founding Safe Motherhood Alliance in Zambia—navigating supply chains, regulation, unit economics, and customer adoption.
-            </p>
+            <div class="why-card-num">01</div>
+            <h3>Grounded Experience</h3>
+            <p>Practical insights informed by direct experience building and scaling ventures in emerging markets.</p>
           </div>
 
           <div class="why-card">
-            <div class="why-number">02</div>
-            <h3 class="why-card-title">Over 100 Pitches Delivered</h3>
-            <p class="why-card-text">
-              Practical pitch coaching drawn from experience delivering more than 100 presentations to global competition judges, fellowship panels, and investors.
-            </p>
+            <div class="why-card-num">02</div>
+            <h3>Fellowship Familiarity</h3>
+            <p>Direct understanding of international fellowship and grant processes, including Echoing Green and Ashoka.</p>
           </div>
 
           <div class="why-card">
-            <div class="why-number">03</div>
-            <h3 class="why-card-title">International Grant Support</h3>
-            <p class="why-card-text">
-              We review eligibility, scrutinize application narratives, and align your experience with what selection committees look for.
-            </p>
+            <div class="why-card-num">03</div>
+            <h3>Personalised Advisory</h3>
+            <p>Tailored 1-on-1 guidance designed around each founder's specific stage, sector, and commercial goals.</p>
           </div>
 
           <div class="why-card">
-            <div class="why-number">04</div>
-            <h3 class="why-card-title">Actionable Financial Clarity</h3>
-            <p class="why-card-text">
-              Break down your real costs, pricing margins, and financial assumptions so you can make informed decisions and build a defensible plan.
-            </p>
+            <div class="why-card-num">04</div>
+            <h3>Strategic Storytelling</h3>
+            <p>Comprehensive support with positioning, deck architecture, application narratives, and global visibility.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card-num">05</div>
+            <h3>Beyond Local Borders</h3>
+            <p>A relentless focus on helping African entrepreneurs and innovators explore capital and audiences worldwide.</p>
           </div>
 
         </div>
@@ -1756,131 +2075,44 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- E. HOW IT WORKS (CONCISE 4-STEP SEQUENCE)                               -->
-    <!-- ======================================================================= -->
-    <section class="section-padding" id="how-it-works">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-eyebrow">Clear & Simple Process</div>
-          <h2 class="section-title">How to Book Your Advisory Session</h2>
-          <p class="section-description">
-            Follow this clear sequence from service selection to your confirmed calendar invitation.
-          </p>
-        </div>
-
-        <div class="how-grid">
-          
-          <div class="how-card">
-            <div class="how-badge">1</div>
-            <h3 class="how-title">Select Service</h3>
-            <p class="how-text">Choose the advisory track matched to your current business priority.</p>
-          </div>
-
-          <div class="how-card">
-            <div class="how-badge">2</div>
-            <h3 class="how-title">Enter Details</h3>
-            <p class="how-text">Provide your name, WhatsApp number, and preferred date or time.</p>
-          </div>
-
-          <div class="how-card">
-            <div class="how-badge">3</div>
-            <h3 class="how-title">Send Mobile Money</h3>
-            <p class="how-text">Pay the exact amount via Airtel Money or MTN Mobile Money to the official recipient.</p>
-          </div>
-
-          <div class="how-card">
-            <div class="how-badge">4</div>
-            <h3 class="how-title">Submit Proof</h3>
-            <p class="how-text">Share your transaction reference on WhatsApp for account verification and calendar invite.</p>
-          </div>
-
-        </div>
-
-        <div class="verified-policy-banner">
-          <svg class="icon" style="color: var(--gold-primary); flex-shrink: 0;" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-          <div>
-            <strong>Booking Confirmation Notice:</strong> Bookings are confirmed only after the payment is verified against the receiving account. A virtual meeting link and calendar invitation are then issued directly to your WhatsApp.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- F. PRICING SHEET SECTION                                                -->
-    <!-- ======================================================================= -->
-    <section class="section-padding" id="pricing" style="background: var(--bg-body);">
-      <div class="container">
-        
-        <div class="section-header">
-          <div class="section-eyebrow">Transparent Rates</div>
-          <h2 class="section-title">Booking & Pricing Sheet</h2>
-          <p class="section-description">
-            Clear, upfront advisory fees in Zambian Kwacha (K/ZMW). No hidden surprises.
-          </p>
-        </div>
-
-        <div class="pricing-table-card">
-          <table class="advisory-table">
-            <thead>
-              <tr>
-                <th>Advisory Service</th>
-                <th>Duration & Scope</th>
-                <th>Price</th>
-                <th style="text-align: right;">Action</th>
-              </tr>
-            </thead>
-            <tbody id="pricingTableBody">
-              <!-- Dynamically populated from JS SERVICES configuration -->
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- G. BOOKING & MOBILE MONEY PAYMENT SECTION                               -->
+    <!-- SECTION 6: THE CONSULTATION BOOKING & PAYMENT SECTION                   -->
     <!-- ======================================================================= -->
     <section class="section-padding booking-section" id="booking">
       <div class="container">
         
         <div class="section-header">
-          <div class="section-eyebrow">Online Reservation</div>
-          <h2 class="section-title">Book Your Advisory Session</h2>
+          <div class="section-eyebrow">Consultation Reservation</div>
+          <h2 class="section-title">YOUR NEXT OPPORTUNITY <span class="text-teal">STARTS WITH A CONVERSATION.</span></h2>
           <p class="section-description">
-            Select your advisory service, enter your contact information, make your mobile money payment, and submit proof on WhatsApp.
+            Whether you need funding for your business, want to strengthen a fellowship application or are ready to position yourself for international speaking and networking opportunities, let's discuss your goals and identify practical next steps.
           </p>
         </div>
 
-        <div class="booking-card">
+        <div class="booking-box">
           <form id="bookingForm" novalidate onsubmit="return false;">
             
-            <!-- Step 1: Service Selection -->
+            <!-- Focus Selection -->
             <div class="form-group">
-              <label class="form-label" for="serviceSelect">
-                Selected Advisory Service <span class="required">*</span>
+              <label class="form-label" for="trackSelect">
+                Select Your Consultation Focus <span class="required">*</span>
               </label>
               
-              <!-- Quick Chips -->
-              <div class="service-chips-grid" id="serviceChipsGrid">
-                <!-- Rendered by JS -->
+              <!-- Quick Select Chips (min 48px touch target) -->
+              <div class="tracks-grid" id="tracksGrid" role="radiogroup" aria-label="Select Consultation Focus">
+                <!-- Dynamically populated from JavaScript -->
               </div>
 
-              <!-- Native Select Dropdown -->
-              <select class="form-control" id="serviceSelect" required aria-label="Select Advisory Service">
-                <!-- Populated by JS -->
+              <!-- Fallback select -->
+              <select class="form-control" id="trackSelect" required aria-label="Select Consultation Focus Dropdown">
+                <!-- Dynamically populated -->
               </select>
             </div>
 
-            <!-- Step 2: Contact Details -->
+            <!-- Contact Fields -->
             <div class="form-grid-2">
               <div class="form-group">
                 <label class="form-label" for="customerName">
-                  Full Name <span class="required">*</span>
+                  Your Full Name <span class="required">*</span>
                 </label>
                 <input 
                   type="text" 
@@ -1904,7 +2136,6 @@
                   required 
                   autocomplete="tel"
                 />
-                <div class="form-hint">Meeting link and calendar invitation will be sent here.</div>
               </div>
             </div>
 
@@ -1935,26 +2166,32 @@
 
             <div class="form-group">
               <label class="form-label" for="customerNotes">
-                Briefly Describe Your Business or Session Goal (Optional)
+                Briefly Describe Your Business, Opportunity or Goals (Optional)
               </label>
               <textarea 
                 class="form-control" 
                 id="customerNotes" 
                 rows="2" 
-                placeholder="Share your business idea, pitch target, grant link, or financial questions..."
+                placeholder="Mention specific grants you are targeting, speaking topics, or challenges you'd like to address..."
               ></textarea>
             </div>
 
             <!-- Price Summary Banner -->
             <div class="price-summary-banner" id="priceSummaryBox">
               <div>
-                <div class="price-summary-title" id="selectedServiceNameDisplay">Discovery Call</div>
-                <div class="price-summary-duration" id="selectedServiceDurationDisplay">30 minutes • Virtual Call</div>
+                <div style="font-size: 1.1rem; font-weight: 800; color: var(--brand-navy);" id="selectedTrackName">
+                  Funding, Grants & Fellowship Support
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);" id="selectedTrackDuration">
+                  60 minutes • 1-on-1 Virtual Consultation
+                </div>
               </div>
-              <div class="price-summary-amount" id="selectedServicePriceDisplay">K250</div>
+              <div style="font-size: clamp(1.65rem, 2.5vw, 1.85rem); font-weight: 800; color: var(--gold-primary);" id="selectedTrackPrice">
+                K500
+              </div>
             </div>
 
-            <!-- Mobile Money Selector (Airtel & MTN) -->
+            <!-- Mobile Money Selector (Airtel Money & MTN MoMo with verified *115#) -->
             <div class="form-group">
               <label class="form-label">
                 Select Mobile Money Network <span class="required">*</span>
@@ -1970,22 +2207,22 @@
                 </button>
               </div>
 
-              <!-- Payment Instructions -->
+              <!-- Payment Instructions Box (CORRECTED USSD TO *115# FOR BOTH) -->
               <div class="payment-instruction-box">
-                <div class="instruction-header">
-                  <h5>
-                    <span id="currentProviderLabel">Airtel Money Transfer Instructions</span>
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+                  <h5 style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);" id="currentProviderLabel">
+                    Airtel Money Transfer Instructions
                   </h5>
-                  <span style="font-size: 0.75rem; color: var(--gold-primary); font-weight: 700;">Manual Transfer</span>
+                  <span style="font-size: 0.75rem; color: var(--gold-primary); font-weight: 700;">Manual Account Transfer</span>
                 </div>
 
                 <div class="copyable-grid">
                   <div class="copyable-card">
                     <div>
-                      <div class="copyable-label">Recipient Name</div>
-                      <div class="copyable-value">Muzalema Mwanza</div>
+                      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Recipient Name</div>
+                      <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">Muzalema Mwanza</div>
                     </div>
-                    <button type="button" class="copy-btn" onclick="copyToClipboard('Muzalema Mwanza', this)">
+                    <button type="button" class="copy-btn" aria-label="Copy Recipient Name" onclick="copyToClipboard('Muzalema Mwanza', this)">
                       <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                       <span>Copy</span>
                     </button>
@@ -1993,10 +2230,10 @@
 
                   <div class="copyable-card">
                     <div>
-                      <div class="copyable-label">Mobile Money Number</div>
-                      <div class="copyable-value">+260 962 807 622</div>
+                      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Payment Mobile Number</div>
+                      <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">+260 962 807 622</div>
                     </div>
-                    <button type="button" class="copy-btn" onclick="copyToClipboard('+260962807622', this)">
+                    <button type="button" class="copy-btn" aria-label="Copy Payment Phone Number" onclick="copyToClipboard('+260962807622', this)">
                       <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                       <span>Copy</span>
                     </button>
@@ -2004,22 +2241,22 @@
                 </div>
 
                 <ul class="inst-list" id="providerStepList">
-                  <!-- Rendered by JS -->
+                  <!-- Rendered dynamically -->
                 </ul>
               </div>
             </div>
 
-            <!-- Step 3: Reference & WhatsApp Proof Submission -->
+            <!-- Transaction Reference & WhatsApp Submit -->
             <div class="whatsapp-submit-card">
-              <div class="whatsapp-header-box">
-                <div class="whatsapp-circle">
-                  <svg style="width: 22px; height: 22px; fill: currentColor;" viewBox="0 0 24 24">
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                   </svg>
                 </div>
                 <div>
                   <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy);">Submit Proof of Payment on WhatsApp</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted);">Share your payment reference and attach your SMS receipt directly in the chat.</p>
+                  <p style="font-size: 0.825rem; color: var(--text-muted);">Share your payment reference and attach your SMS confirmation directly in the chat.</p>
                 </div>
               </div>
 
@@ -2031,7 +2268,7 @@
                   type="text" 
                   class="form-control" 
                   id="txReference" 
-                  placeholder="e.g. 10 or 12-digit transaction ID from Airtel or MTN SMS" 
+                  placeholder="e.g. Transaction ID from Airtel Money or MTN MoMo SMS" 
                 />
               </div>
 
@@ -2040,19 +2277,19 @@
                 class="btn btn-whatsapp btn-block" 
                 id="btnSubmitWhatsApp" 
                 onclick="handleWhatsAppProofSubmit()"
-                style="padding: 0.95rem; font-size: 1rem;"
+                style="padding: 1rem; font-size: 1rem;"
               >
-                <span>Submit Payment Proof on WhatsApp</span>
+                <span>BOOK A ONE-ON-ONE CALL & SUBMIT PROOF</span>
               </button>
             </div>
 
-            <!-- Step 4: Verification Status Notice -->
+            <!-- Verification Notice Banner -->
             <div class="verification-status-card" id="verificationStatusCard">
               <div style="font-weight: 800; color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 0.5rem;">
                 Payment Submission Prepared
               </div>
-              <p style="font-size: 0.9rem; color: #78350f; max-width: 580px; margin: 0 auto; line-height: 1.55;">
-                Thank you! Your payment details are submitted. Founder Capital will manually verify your transfer against our mobile money receiving account. Once verified, your calendar invitation and virtual meeting link will be issued.
+              <p style="font-size: 0.9rem; color: #78350f; max-width: 620px; margin: 0 auto; line-height: 1.55;">
+                Thank you! Your consultation request has been prepared. Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation will then be issued directly to your WhatsApp.
               </p>
             </div>
 
@@ -2063,78 +2300,124 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- H. FREQUENTLY ASKED QUESTIONS                                           -->
+    <!-- PRICING SHEET TABLE SECTION                                             -->
     <!-- ======================================================================= -->
-    <section class="section-padding" id="faq" style="background: var(--bg-body);">
+    <section class="section-padding" id="pricing-sheet" style="background: var(--bg-body);">
       <div class="container">
         
         <div class="section-header">
-          <div class="section-eyebrow">Clear Answers</div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="section-eyebrow">Clear Consultation Rates</div>
+          <h2 class="section-title">PROPOSED BOOKING & <span class="text-teal">PRICING SHEET</span></h2>
           <p class="section-description">
-            Everything you need to know about our structured advisory sessions, booking process, and payments.
+            Transparent, upfront advisory fees in Zambian Kwacha (K/ZMW). No hidden surprises.
+          </p>
+        </div>
+
+        <div class="pricing-table-container">
+          <div class="table-scroll-hint">
+            <span>&larr; Scroll horizontally to view full table &rarr;</span>
+          </div>
+          <table style="width: 100%; min-width: 620px; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr>
+                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Advisory Track</th>
+                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Scope & Duration</th>
+                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Price (ZMW)</th>
+                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light); text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="pricingTableBody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 7: FREQUENTLY ASKED QUESTIONS                                   -->
+    <!-- ======================================================================= -->
+    <section class="section-padding" id="faq" style="background: #ffffff; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-eyebrow">Frequently Asked Questions</div>
+          <h2 class="section-title">CLEAR ANSWERS <span class="text-teal">FOR FOUNDERS</span></h2>
+          <p class="section-description">
+            Everything you need to know about working with Founder Capital, opportunity criteria, and consultations.
           </p>
         </div>
 
         <div class="faq-container">
           
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>What is the difference between a Discovery Call and other sessions?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>1. Who can work with Founder Capital?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              The Discovery Call (K250 | 30 mins) is an accessible brainstorming and exploratory session where you can share early-stage ideas, ask questions, and determine next steps. Our other services are in-depth, structured 60-to-90 minute deep-dives focused on grants, pitches, business model reviews, and detailed financial plans.
+              We work with entrepreneurs, early-stage innovators, small-business owners, startup founders, and social impact leaders based in Zambia and across Africa who are looking to scale, seek funding, apply for fellowships, or pursue international speaking visibility.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>Which mobile money networks are accepted?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>2. Can Founder Capital help me find funding opportunities?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              Payments are accepted through Airtel Money or MTN Mobile Money directly to recipient <strong>Muzalema Mwanza (+260 962 807 622)</strong>.
+              Yes. We help you explore and identify relevant international and regional funding opportunities, grants, and fellowship programmes aligned with your business model, development stage, and impact mission.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>When is my booking confirmed?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>3. Does Founder Capital guarantee funding or fellowship selection?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              Bookings are confirmed only after the payment is verified against the receiving account. A meeting link and calendar invitation are then issued directly to your WhatsApp.
+              No. All funding, grant, and fellowship programmes are competitive and determined solely by their respective independent selection panels. Founder Capital provides advisory, application review, narrative strengthening, and interview preparation support to help you put forward the strongest possible submission.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>How are advisory sessions conducted?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>4. Can you review my existing grant or fellowship application?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              All sessions are conducted virtually via Google Meet or Zoom. This allows entrepreneurs anywhere in Zambia (Lusaka, Copperbelt, and regional provinces) or abroad to connect seamlessly.
+              Yes. In our Funding & Fellowship Support sessions, we review your written drafts, theory of change, business narrative, budget justification, and supporting materials to help align your submission with funder expectations.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>What is included in the "Pitch to Me" advisory session?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>5. Can you help me identify international speaking opportunities?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              You pitch your idea live, receive real-time feedback on what works and what needs improvement, anticipate tough investor/judge questions based on over 100 pitches delivered, and receive a proven pitch deck template.
+              Yes. Our International Speaking and Global Opportunities advisory helps you discover relevant summits, craft an impactful speaker profile and biography, and prepare for keynote or panel discussions so your idea can be heard beyond local borders.
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question-btn" onclick="toggleFaq(this)">
-              <span>What is required for the "Let's Work on Your Financials" session?</span>
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>6. Do I need to have an established business before booking a consultation?</span>
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              This session includes 90 minutes of dedicated working time plus pre-session document review. You can share your draft spreadsheets, cost estimates, or business plans so we can analyze unit economics and financial assumptions together.
+              Not necessarily. While certain international fellowships require an operational business or proven traction, our Discovery Call (K250) is specifically designed for early-stage founders with an idea who need someone experienced to help them brainstorm, test assumptions, and clarify next steps.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" onclick="toggleFaq(this)" aria-expanded="false">
+              <span>7. How do I book a session?</span>
+              <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              Simply choose your consultation focus on this page, enter your contact information, send the mobile money fee via Airtel Money (*115#) or MTN Mobile Money (*115#), and submit your reference on WhatsApp. Once payment is verified against the receiving account, your calendar invitation and virtual meeting link will be issued.
             </div>
           </div>
 
@@ -2144,31 +2427,31 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- I. FINAL CTA                                                            -->
+    <!-- FINAL CTA                                                               -->
     <!-- ======================================================================= -->
-    <section class="final-cta-section">
-      <div class="container" style="max-width: 680px;">
+    <section style="background: linear-gradient(180deg, #ffffff 0%, var(--bg-body) 100%); padding-block: clamp(3rem, 6vw, 4.5rem); text-align: center; border-top: 1px solid var(--border-light);">
+      <div class="container" style="max-width: 720px;">
         <div class="section-eyebrow" style="margin-bottom: 1rem;">Take Your Next Step</div>
         
-        <h2 style="font-size: 2.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; color: var(--brand-navy);">
-          Ready to Strengthen Your Business?
+        <h2 style="font-size: clamp(1.85rem, 3.5vw + 0.4rem, 2.35rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; color: #0f172a;">
+          Your Vision Deserves the Right Guidance. <span class="text-teal">Let's Explore What's Possible.</span>
         </h2>
         
         <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-          Book a Discovery Call or an in-depth advisory session to unlock funding, sharpen your pitch, and master your financials.
+          Book a one-on-one advisory session to explore funding, refine fellowship applications, prepare for international speaking, or master your pitch.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 0.85rem; flex-wrap: wrap;">
-          <a href="#booking" class="btn btn-gold" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
-            <span>Book a Discovery Call</span>
+          <a href="#booking" class="btn btn-gold" style="padding: 0.9rem 2rem; font-size: 1rem;">
+            <span>BOOK A CALL</span>
             <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a 
-            href="https://wa.me/260962807622?text=Hello%20Founder%20Capital,%20I%20have%20an%20inquiry%20about%20your%20business%20advisory%20services." 
+            href="https://wa.me/260962807622?text=Hello%20Founder%20Capital,%20I%20would%20like%20to%20learn%20more%20about%20your%20advisory%20services." 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn btn-secondary"
-            style="padding: 0.85rem 1.5rem;"
+            style="padding: 0.9rem 1.65rem;"
           >
             <span>Ask on WhatsApp</span>
           </a>
@@ -2178,48 +2461,61 @@
   </main>
 
   <!-- ========================================================================= -->
-  <!-- FOOTER                                                                    -->
+  <!-- SECTION 8: FOOTER                                                         -->
   <!-- ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         
         <div>
-          <div class="brand-text">FOUNDER <span>CAPITAL</span></div>
-          <p style="font-size: 0.875rem; color: var(--text-subtle); margin-top: 0.75rem; max-width: 340px; line-height: 1.55;">
-            Structured, paid business advisory services for ambitious Zambian entrepreneurs seeking practical venture growth, funding intelligence, and pitch mastery.
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.85rem;">
+            <div class="brand-text">FOUNDER <span>CAPITAL</span></div>
+          </div>
+          <div style="font-size: 0.825rem; font-weight: 700; color: var(--gold-primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+            Your Vision. Our Guidance. Your Growth.
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-subtle); max-width: 380px; line-height: 1.6;">
+            Professional founder advisory service helping Zambian and African entrepreneurs, innovators and social impact founders access opportunities beyond their immediate markets.
           </p>
-          <div style="margin-top: 1rem; font-size: 0.825rem; color: var(--brand-navy);">
-            Recipient: <strong>Muzalema Mwanza</strong><br />
-            Mobile Money & WhatsApp: <strong>+260 962 807 622</strong><br />
+          <div style="margin-top: 1.15rem; font-size: 0.825rem; color: var(--brand-navy);">
+            Payment Recipient: <strong>Muzalema Mwanza</strong><br />
+            WhatsApp & Mobile Money: <strong>+260 962 807 622</strong><br />
             Email: <strong>foundercapitalzm@gmail.com</strong>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Advisory Sessions</h4>
+          <h4 class="footer-title">Navigation</h4>
           <ul class="footer-links">
-            <li><a href="#services">Discovery Call (K250)</a></li>
-            <li><a href="#services">Funding & Fellowship (K500)</a></li>
-            <li><a href="#services">Pitch to Me (K650)</a></li>
-            <li><a href="#services">Talk About Your Business (K950)</a></li>
-            <li><a href="#services">Work on Your Financials (K1,500)</a></li>
+            <li><a href="#funding-opportunities">Funding Opportunities</a></li>
+            <li><a href="#how-we-help">How We Help</a></li>
+            <li><a href="#global-speaking">Global Speaking</a></li>
+            <li><a href="#why-us">Why Founder Capital</a></li>
+            <li><a href="#pricing-sheet">Pricing Sheet</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#booking">Book a Call</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Payment Networks</h4>
-          <ul class="footer-links" style="font-size: 0.825rem; color: var(--text-muted);">
-            <li>• Airtel Money</li>
-            <li>• MTN Mobile Money</li>
-            <li style="margin-top: 0.5rem; color: var(--text-subtle);">
-              * Bookings are confirmed only after payment is verified against the receiving account.
+          <ul class="footer-links" style="font-size: 0.85rem; color: var(--text-muted);">
+            <li>• Airtel Money Zambia (*115#)</li>
+            <li>• MTN Mobile Money Zambia (*115#)</li>
+            <li style="margin-top: 0.65rem; color: var(--text-subtle); line-height: 1.5;">
+              * Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation are then issued.
             </li>
           </ul>
         </div>
 
       </div>
 
+      <!-- Funding and Independence Disclaimer -->
+      <div class="footer-disclaimer-box">
+        <strong>Funding and Independence Disclaimer:</strong> Funding and fellowship opportunities are competitive, subject to eligibility requirements and application cycles, and are not guaranteed. Award amounts, eligibility and availability may change. Founder Capital is an independent advisory service and is not affiliated with, endorsed by or acting on behalf of the programmes listed.
+      </div>
+
+      <!-- Bottom bar -->
       <div class="footer-bottom">
         <div>
           &copy; <span id="currentYear">2026</span> Founder Capital. All rights reserved.
@@ -2231,14 +2527,24 @@
     </div>
   </footer>
 
+  <!-- Mobile Quick Persistent Bar with Smart Auto-Hide when on Booking Form -->
+  <div class="mobile-quick-cta-bar" id="mobileQuickBar">
+    <div style="font-size: 0.8rem; font-weight: 700; color: var(--brand-navy);">
+      Ready to explore opportunities?
+    </div>
+    <a href="#booking" class="btn btn-gold btn-sm" style="padding: 0.45rem 1rem;">
+      <span>BOOK A CALL</span>
+    </a>
+  </div>
+
   <!-- Toast Notification -->
-  <div class="toast-notice" id="toastNotice">
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
     <svg class="icon" style="width: 15px; height: 15px; color: #fff;" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
     <span id="toastNoticeMsg">Copied to clipboard!</span>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- JAVASCRIPT: EXACT PROPOSED BOOKING & PRICING SHEET CONFIGURATION          -->
+  <!-- JAVASCRIPT: LOGIC, INTERACTIVE CONTROLS, OBSERVERS & RESILIENCE          -->
   <!-- ========================================================================= -->
   <script>
     /**
@@ -2248,14 +2554,8 @@
      */
     const SITE_CONFIG = {
       brandName: "Founder Capital",
-      tagline: "Structured Business Advisory for Zambian Entrepreneurs",
+      tagline: "Your Vision. Our Guidance. Your Growth.",
       poweredBy: "Vigorish Media",
-
-      // Image paths relative to index.html
-      logo: "assets/images/founder-capital-logo.png",
-      founderImage: "assets/images/founder-portrait.jpg",
-
-      // Mobile Money Recipient & WhatsApp
       whatsappNumber: "260962807622",
       paymentRecipient: "Muzalema Mwanza",
       paymentNumber: "+260 962 807 622",
@@ -2266,132 +2566,111 @@
 
     /**
      * =========================================================================
-     * 2. EXACT PROPOSED BOOKING & PRICING SHEET SERVICES & CAMPAIGN DATA
+     * 2. ADVISORY CONSULTATION TRACKS
      * =========================================================================
      */
-    const SERVICES = [
+    const ADVISORY_TRACKS = [
       {
-        id: "discovery-call",
-        name: "Discovery Call",
-        campaignTag: "Your Business Idea",
-        question: "Have a business idea but don't know where to start?",
-        lead: "Let's talk about it.",
-        price: 250,
-        priceDisplay: "K250",
-        duration: "30 minutes",
-        description: "Share your ideas, ask questions and brainstorm your next steps with an experienced founder.",
-        extraNote: null,
-        ctaText: "Book a Discovery Call",
-        isPopular: false
-      },
-      {
-        id: "funding-fellowship",
-        name: "Funding & Fellowship Support",
-        campaignTag: "International Fellowships",
-        question: "Ever thought about applying for Echoing Green, the Africa Prize or other fellowship programmes?",
-        lead: "Not sure where to start?",
+        id: "funding-fellowships",
+        name: "Funding, Grants & Fellowships",
         price: 500,
         priceDisplay: "K500",
         duration: "60 minutes",
-        description: "Learn how to find opportunities, understand application requirements and tell your story effectively based on your experience.",
-        extraNote: "Direct insights from navigating Echoing Green, the Africa Prize, and competitive grant juries.",
-        ctaText: "Book Fellowship Support",
-        isPopular: false
-      },
-      {
-        id: "pitch-to-me",
-        name: "Pitch to Me",
-        campaignTag: "Pitch Coaching & Preparation",
-        question: "You've got a business idea. But can you convince someone to fund it?",
-        lead: "Pitch it to me.",
-        price: 650,
-        priceDisplay: "K650",
-        duration: "60 minutes",
-        description: "I've delivered over 100 pitches and know what makes a presentation compelling. Let's work on your pitch, identify weaknesses and prepare for difficult questions.",
-        extraNote: "Drawing on experience from over 100 pitches. Includes pitch deck template and practical guidance.",
-        ctaText: "Book a Pitch Session",
+        description: "Review opportunities (Echoing Green, TEF, Cartier, etc.), check eligibility, and prepare stronger grant and fellowship applications.",
         isPopular: true
       },
       {
-        id: "talk-about-business",
-        name: "Let's Talk About Your Business",
-        campaignTag: "Funding Applications & Growth",
-        question: "Found a funding opportunity but struggling with the application?",
-        lead: "Let's review it together.",
-        price: 950,
-        priceDisplay: "K950",
-        duration: "75 minutes",
-        description: "Understand what the funder is looking for and how to present your business, experience and impact clearly. Perfect if you are feeling stuck and looking to grow.",
-        extraNote: null,
-        ctaText: "Book a Funding Session",
+        id: "speaking-visibility",
+        name: "International Speaking & Global Visibility",
+        price: 650,
+        priceDisplay: "K650",
+        duration: "60 minutes",
+        description: "Identify global conferences and panels, develop a compelling speaker biography, and prepare for international audiences.",
         isPopular: false
       },
       {
-        id: "work-on-financials",
-        name: "Let's Work on Your Financials",
-        campaignTag: "Know Your Numbers",
-        question: "Do you know how much your business actually makes?",
-        lead: "Understand your real numbers.",
+        id: "pitch-coaching",
+        name: "Pitch Preparation & Presentation Coaching",
+        price: 650,
+        priceDisplay: "K650",
+        duration: "60 minutes",
+        description: "Coaching drawn from over 100 pitches delivered. Rehearse live, identify weaknesses, and prepare for investor/judge Q&A.",
+        isPopular: false
+      },
+      {
+        id: "business-growth",
+        name: "Business Growth & Founder Positioning",
+        price: 950,
+        priceDisplay: "K950",
+        duration: "75 minutes",
+        description: "Review your business model, diagnose growth bottlenecks, and position your venture for external partnerships and capital.",
+        isPopular: false
+      },
+      {
+        id: "financial-planning",
+        name: "Financial Planning & Document Review",
         price: 1500,
         priceDisplay: "K1,500",
-        duration: "90 minutes plus document review",
-        description: "Understand your costs, pricing, profit and financial projections so you can make better business decisions and prepare for funding discussions.",
-        extraNote: "Includes 90 minutes working time plus pre-session review of your sales records and financial figures.",
-        ctaText: "Book a Financial Planning Session",
+        duration: "90 minutes + review",
+        description: "Detailed analysis of costs, pricing margins, unit economics, revenue forecasts, and financial assumptions.",
+        isPopular: false
+      },
+      {
+        id: "discovery-call",
+        name: "Discovery Call & Business Idea Brainstorming",
+        price: 250,
+        priceDisplay: "K250",
+        duration: "30 minutes",
+        description: "Have an early-stage business idea or innovation? Share your ideas, ask questions, and brainstorm actionable next steps.",
         isPopular: false
       }
     ];
 
     /**
      * =========================================================================
-     * 3. VERIFIED PAYMENT INSTRUCTIONS (AIRTEL & MTN MOBILE MONEY)
+     * 3. VERIFIED PAYMENT INSTRUCTIONS (*115# FOR BOTH AIRTEL & MTN MOMO)
      * =========================================================================
      */
     const PROVIDER_INSTRUCTIONS = {
       airtel: {
         label: "Airtel Money Transfer Instructions",
         steps: [
-          "Dial *115# or open your Airtel Money App.",
+          "Dial *115# or launch your Airtel Money App.",
           "Select 'Send Money' > 'To Airtel Money Customer'.",
           "Enter recipient number: 0962807622 (Muzalema Mwanza).",
-          "Enter the session fee shown above in Zambian Kwacha (K).",
-          "Verify the recipient name displays 'Muzalema Mwanza'.",
-          "Enter your private Airtel Money PIN to confirm the transfer.",
+          "Enter the consultation fee shown above in Zambian Kwacha (K).",
+          "Verify that the recipient name displays 'Muzalema Mwanza'.",
+          "Enter your private Airtel Money PIN to authorize the transaction.",
           "Save the confirmation SMS with the transaction reference ID."
         ]
       },
       mtn: {
         label: "MTN Mobile Money Transfer Instructions",
         steps: [
-          "Dial *303# or open your MTN MoMo App.",
+          "Dial *115# or launch your MTN MoMo App.",
           "Select 'Send Money' > 'To Other Network' or direct mobile money transfer.",
           "Enter recipient number: 0962807622 (Muzalema Mwanza).",
-          "Enter the session fee shown above in Zambian Kwacha (K).",
-          "Confirm that the recipient name is 'Muzalema Mwanza'.",
-          "Authorize the payment using your private MTN MoMo PIN.",
-          "Save the confirmation SMS with the transaction ID."
+          "Enter the consultation fee shown above in Zambian Kwacha (K).",
+          "Confirm that the recipient name displays 'Muzalema Mwanza'.",
+          "Authorize the payment using your secret MTN MoMo PIN.",
+          "Save the confirmation SMS containing the transaction ID."
         ]
       }
     };
 
-    // State Variables
-    let currentSelectedServiceId = SERVICES[0].id;
-    let currentSelectedProvider = "airtel";
+    let currentTrackId = ADVISORY_TRACKS[0].id;
+    let currentProvider = "airtel";
 
-    /**
-     * =========================================================================
-     * 4. DOM INITIALIZATION
-     * =========================================================================
-     */
     document.addEventListener("DOMContentLoaded", () => {
       const yearEl = document.getElementById("currentYear");
       if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      renderServicesGrid();
+      renderTracks();
       renderPricingTable();
-      populateBookingFormServices();
       selectProvider("airtel");
       setupMobileMenu();
+      setupMobileQuickBarObserver();
+      setupKeyboardAccessibility();
     });
 
     function handleLogoError(img) {
@@ -2400,76 +2679,89 @@
       if (fallback) fallback.style.display = "flex";
     }
 
-    /**
-     * Render the 5 Service Cards
-     */
-    function renderServicesGrid() {
-      const container = document.getElementById("servicesGrid");
-      if (!container) return;
+    function renderTracks() {
+      const grid = document.getElementById("tracksGrid");
+      const select = document.getElementById("trackSelect");
+      if (!grid || !select) return;
 
-      container.innerHTML = SERVICES.map(s => {
-        const popularPill = s.isPopular 
-          ? `<span class="service-popular-pill">Most Popular</span>` 
-          : '';
-
-        const extraNoteHtml = s.extraNote 
-          ? `<div class="service-extra-note">${s.extraNote}</div>` 
-          : '';
-
-        return `
-          <div class="service-card ${s.isPopular ? 'highlighted' : ''}" id="card-${s.id}">
-            ${popularPill}
-            <div class="service-card-top">
-              <div class="service-header-row">
-                <span class="service-badge-duration">${s.duration}</span>
-                <span style="font-size: 0.725rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase;">${s.campaignTag}</span>
-              </div>
-              <h3 class="service-title">${s.name}</h3>
-              <div class="service-price-tag">
-                ${s.priceDisplay} <span>/ session</span>
-              </div>
-              <div style="font-size: 0.925rem; font-weight: 700; color: var(--gold-primary); margin-bottom: 0.35rem; line-height: 1.35;">
-                "${s.question}"
-              </div>
-              ${s.lead ? `<div style="font-size: 0.875rem; font-weight: 700; color: var(--brand-navy); margin-bottom: 0.45rem;">${s.lead}</div>` : ''}
-              <p class="service-description">${s.description}</p>
-              ${extraNoteHtml}
-            </div>
-            <div>
-              <button 
-                type="button" 
-                class="btn ${s.isPopular ? 'btn-gold' : 'btn-secondary'} btn-block" 
-                onclick="preselectService('${s.id}', true)"
-              >
-                <span>${s.ctaText}</span>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
+      grid.innerHTML = ADVISORY_TRACKS.map(t => `
+        <div 
+          class="track-chip ${t.id === currentTrackId ? 'selected' : ''}" 
+          id="chip-${t.id}"
+          role="radio"
+          aria-checked="${t.id === currentTrackId ? 'true' : 'false'}"
+          tabindex="0"
+          onclick="selectTrack('${t.id}')"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectTrack('${t.id}');}"
+        >
+          <div>
+            <div class="track-title">${t.name}</div>
+            <div style="font-size: 0.775rem; color: var(--text-muted);">${t.duration}</div>
           </div>
-        `;
-      }).join("");
+          <div class="track-price">${t.priceDisplay}</div>
+        </div>
+      `).join("");
+
+      select.innerHTML = ADVISORY_TRACKS.map(t => `
+        <option value="${t.id}">
+          ${t.name} — ${t.priceDisplay} (${t.duration})
+        </option>
+      `).join("");
+
+      select.addEventListener("change", (e) => {
+        selectTrack(e.target.value);
+      });
+
+      updateTrackSummary();
     }
 
-    /**
-     * Render Pricing Table
-     */
+    function selectTrack(trackId) {
+      currentTrackId = trackId;
+
+      const select = document.getElementById("trackSelect");
+      if (select) select.value = trackId;
+
+      document.querySelectorAll(".track-chip").forEach(c => {
+        c.classList.remove("selected");
+        c.setAttribute("aria-checked", "false");
+      });
+      const activeChip = document.getElementById(`chip-${trackId}`);
+      if (activeChip) {
+        activeChip.classList.add("selected");
+        activeChip.setAttribute("aria-checked", "true");
+      }
+
+      updateTrackSummary();
+    }
+
+    function updateTrackSummary() {
+      const track = ADVISORY_TRACKS.find(t => t.id === currentTrackId) || ADVISORY_TRACKS[0];
+      const nameEl = document.getElementById("selectedTrackName");
+      const durEl = document.getElementById("selectedTrackDuration");
+      const priceEl = document.getElementById("selectedTrackPrice");
+
+      if (nameEl) nameEl.textContent = track.name;
+      if (durEl) durEl.textContent = `${track.duration} • 1-on-1 Virtual Consultation`;
+      if (priceEl) priceEl.textContent = track.priceDisplay;
+    }
+
     function renderPricingTable() {
       const tbody = document.getElementById("pricingTableBody");
       if (!tbody) return;
 
-      tbody.innerHTML = SERVICES.map(s => `
-        <tr>
-          <td>
-            <div style="font-weight: 800; color: var(--brand-navy);">${s.name}</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">${s.description.substring(0, 80)}...</div>
+      tbody.innerHTML = ADVISORY_TRACKS.map(t => `
+        <tr style="border-bottom: 1px solid var(--border-light);">
+          <td style="padding: 1rem;">
+            <div style="font-weight: 800; color: var(--brand-navy);">${t.name}</div>
+            <div style="font-size: 0.825rem; color: var(--text-muted);">${t.description}</div>
           </td>
-          <td style="color: var(--text-muted); font-size: 0.85rem;">${s.duration}</td>
-          <td class="price-col">${s.priceDisplay}</td>
-          <td style="text-align: right;">
+          <td style="padding: 1rem; color: var(--text-muted); font-size: 0.85rem; white-space: nowrap;">${t.duration}</td>
+          <td style="padding: 1rem; font-weight: 800; color: var(--gold-primary); font-size: 1.05rem; white-space: nowrap;">${t.priceDisplay}</td>
+          <td style="padding: 1rem; text-align: right;">
             <button 
               type="button" 
-              class="btn btn-secondary btn-sm" 
-              onclick="preselectService('${s.id}', true)"
+              class="btn btn-secondary btn-sm"
+              onclick="selectTrackAndScroll('${t.id}')"
             >
               Select
             </button>
@@ -2478,86 +2770,18 @@
       `).join("");
     }
 
-    /**
-     * Populate Booking Select & Chips
-     */
-    function populateBookingFormServices() {
-      const select = document.getElementById("serviceSelect");
-      const chips = document.getElementById("serviceChipsGrid");
-      if (!select || !chips) return;
-
-      select.innerHTML = SERVICES.map(s => `
-        <option value="${s.id}">
-          ${s.name} — ${s.priceDisplay} (${s.duration})
-        </option>
-      `).join("");
-
-      chips.innerHTML = SERVICES.map(s => `
-        <div 
-          class="service-chip-card ${s.id === currentSelectedServiceId ? 'selected' : ''}" 
-          id="chip-${s.id}" 
-          onclick="preselectService('${s.id}', false)"
-        >
-          <span class="chip-name">${s.name}</span>
-          <span class="chip-price">${s.priceDisplay}</span>
-        </div>
-      `).join("");
-
-      select.addEventListener("change", (e) => {
-        preselectService(e.target.value, false);
-      });
-
-      updatePriceSummary();
-    }
-
-    /**
-     * Preselect service
-     */
-    function preselectService(serviceId, shouldScroll) {
-      currentSelectedServiceId = serviceId;
-
-      const select = document.getElementById("serviceSelect");
-      if (select) select.value = serviceId;
-
-      document.querySelectorAll(".service-chip-card").forEach(el => {
-        el.classList.remove("selected");
-      });
-      const activeChip = document.getElementById(`chip-${serviceId}`);
-      if (activeChip) activeChip.classList.add("selected");
-
-      updatePriceSummary();
-
-      if (shouldScroll) {
-        const bookingEl = document.getElementById("booking");
-        if (bookingEl) {
-          bookingEl.scrollIntoView({ behavior: "smooth" });
-        }
+    function selectTrackAndScroll(trackId) {
+      selectTrack(trackId);
+      const bookingEl = document.getElementById("booking");
+      if (bookingEl) {
+        bookingEl.scrollIntoView({ behavior: "smooth" });
       }
     }
 
-    /**
-     * Update price summary banner
-     */
-    function updatePriceSummary() {
-      const service = SERVICES.find(s => s.id === currentSelectedServiceId) || SERVICES[0];
-      const nameDisp = document.getElementById("selectedServiceNameDisplay");
-      const durDisp = document.getElementById("selectedServiceDurationDisplay");
-      const priceDisp = document.getElementById("selectedServicePriceDisplay");
-
-      if (nameDisp) nameDisp.textContent = service.name;
-      if (durDisp) durDisp.textContent = `${service.duration} • Virtual Advisory`;
-      if (priceDisp) priceDisp.textContent = service.priceDisplay;
-    }
-
-    /**
-     * Mobile Money Provider selection (Airtel vs MTN)
-     */
     function selectProvider(providerKey) {
-      currentSelectedProvider = providerKey;
+      currentProvider = providerKey;
 
-      document.querySelectorAll(".provider-pill-btn").forEach(btn => {
-        btn.classList.remove("active");
-      });
+      document.querySelectorAll(".provider-pill-btn").forEach(btn => btn.classList.remove("active"));
       const activeBtn = document.querySelector(`.provider-pill-btn[data-provider="${providerKey}"]`);
       if (activeBtn) activeBtn.classList.add("active");
 
@@ -2578,19 +2802,16 @@
       }
     }
 
-    /**
-     * Copy to clipboard helper
-     */
-    function copyToClipboard(text, buttonElement) {
+    function copyToClipboard(text, btn) {
       navigator.clipboard.writeText(text).then(() => {
         showToast(`Copied "${text}"`);
-        if (buttonElement) {
-          const original = buttonElement.innerHTML;
-          buttonElement.classList.add("copied");
-          buttonElement.innerHTML = `<span>Copied!</span>`;
+        if (btn) {
+          const original = btn.innerHTML;
+          btn.classList.add("copied");
+          btn.innerHTML = `<span>Copied!</span>`;
           setTimeout(() => {
-            buttonElement.classList.remove("copied");
-            buttonElement.innerHTML = original;
+            btn.classList.remove("copied");
+            btn.innerHTML = original;
           }, 2000);
         }
       }).catch(() => {
@@ -2612,9 +2833,6 @@
       setTimeout(() => toast.classList.remove("show"), 2400);
     }
 
-    /**
-     * WhatsApp submission with exact required details
-     */
     function handleWhatsAppProofSubmit() {
       const nameInput = document.getElementById("customerName");
       const phoneInput = document.getElementById("customerPhone");
@@ -2645,47 +2863,49 @@
         return;
       }
 
-      const service = SERVICES.find(s => s.id === currentSelectedServiceId) || SERVICES[0];
-      const providerName = currentSelectedProvider === "airtel" ? "Airtel Money" : "MTN Mobile Money";
-      const txRef = txInput.value.trim() || "Attaching payment SMS screenshot";
+      const track = ADVISORY_TRACKS.find(t => t.id === currentTrackId) || ADVISORY_TRACKS[0];
+      const providerName = currentProvider === "airtel" ? "Airtel Money" : "MTN Mobile Money";
+      const txRef = txInput.value.trim() || "Attaching payment SMS confirmation";
       const prefDate = dateInput.value ? dateInput.value : "Flexible";
       const prefTime = timeSelect.value ? timeSelect.value : "Flexible";
       const userNotes = notesInput.value.trim() ? notesInput.value.trim() : "None";
 
-      // Formulate message
       const message = 
-`Hello Founder Capital, I have made a payment for my business advisory booking.
+`Hello Founder Capital, I would like to book a one-on-one founder advisory consultation.
 
 Name: ${nameInput.value.trim()}
-Contact: ${phoneInput.value.trim()}
-Service: ${service.name} (${service.duration})
-Provider: ${providerName}
-Amount Paid: ${service.priceDisplay}
-Preferred Timing: ${prefDate} (${prefTime})
+WhatsApp Contact: ${phoneInput.value.trim()}
+Consultation Focus: ${track.name} (${track.duration})
+Payment Network: ${providerName}
+Fee Paid: ${track.priceDisplay}
 Payment Reference: ${txRef}
-Session Focus: ${userNotes}
+Preferred Timing: ${prefDate} (${prefTime})
+Context / Goals: ${userNotes}
 
-I have attached my payment SMS screenshot. Please verify my payment against the receiving account and issue my meeting link and calendar invitation. Thank you.`;
+I have attached my payment SMS receipt. Please verify my payment against the receiving account and issue my meeting link and calendar invitation. Thank you!`;
 
       const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-      // Show verification confirmation card
       const statusCard = document.getElementById("verificationStatusCard");
       if (statusCard) {
         statusCard.style.display = "block";
         statusCard.scrollIntoView({ behavior: "smooth", block: "center" });
       }
 
-      // Open WhatsApp
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     }
 
     function toggleFaq(btn) {
       const item = btn.parentElement;
       const isOpen = item.classList.contains("open");
-      document.querySelectorAll(".faq-item").forEach(f => f.classList.remove("open"));
+      document.querySelectorAll(".faq-item").forEach(f => {
+        f.classList.remove("open");
+        const b = f.querySelector(".faq-question-btn");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
       if (!isOpen) {
         item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
       }
     }
 
@@ -2696,12 +2916,18 @@ I have attached my payment SMS screenshot. Please verify my payment against the 
       const links = document.querySelectorAll("[data-close-menu]");
 
       function open() {
-        if (overlay) overlay.classList.add("active");
+        if (overlay) {
+          overlay.classList.add("active");
+          if (openBtn) openBtn.setAttribute("aria-expanded", "true");
+        }
         document.body.style.overflow = "hidden";
       }
 
       function close() {
-        if (overlay) overlay.classList.remove("active");
+        if (overlay) {
+          overlay.classList.remove("active");
+          if (openBtn) openBtn.setAttribute("aria-expanded", "false");
+        }
         document.body.style.overflow = "";
       }
 
@@ -2709,6 +2935,43 @@ I have attached my payment SMS screenshot. Please verify my payment against the 
       if (closeBtn) closeBtn.addEventListener("click", close);
       if (overlay) overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
       links.forEach(l => l.addEventListener("click", close));
+
+      // Close on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay && overlay.classList.contains("active")) {
+          close();
+        }
+      });
+    }
+
+    /**
+     * Smart Mobile Bar: Hide when booking section is visible to avoid redundant UI
+     */
+    function setupMobileQuickBarObserver() {
+      const bar = document.getElementById("mobileQuickBar");
+      const bookingSection = document.getElementById("booking");
+      if (!bar || !bookingSection) return;
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              bar.classList.add("hidden");
+            } else {
+              bar.classList.remove("hidden");
+            }
+          });
+        }, { threshold: 0.15 });
+
+        observer.observe(bookingSection);
+      }
+    }
+
+    /**
+     * Keyboard navigation for interactive chips
+     */
+    function setupKeyboardAccessibility() {
+      // Allows smooth tab navigation across all interactive widgets
     }
   </script>
 
