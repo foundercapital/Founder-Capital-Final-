@@ -1564,6 +1564,226 @@
       color: var(--brand-teal);
     }
 
+    /* Enhanced Booking Form Layout & Instructions */
+    .booking-form-main-title {
+      font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin: 0 0 0.85rem 0;
+      letter-spacing: -0.01em;
+    }
+
+    /* Subtle light-amber/light-red instruction panel */
+    .booking-instruction-panel {
+      background: #fff8f0;
+      border: 1.5px solid #fed7aa;
+      border-left: 4.5px solid #ea580c;
+      border-radius: var(--radius-md);
+      padding: 0.95rem 1.15rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 6px rgba(234, 88, 12, 0.05);
+    }
+
+    .booking-instruction-panel .inst-icon-wrap {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ffedd5;
+      color: #ea580c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .booking-instruction-panel p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: #9a3412;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .form-required-legend {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .form-required-legend .required {
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .form-helper-text {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .field-error-msg {
+      font-size: 0.775rem;
+      color: #dc2626;
+      font-weight: 700;
+      margin-top: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .form-control.is-invalid {
+      border-color: #ef4444 !important;
+      background: #fef2f2 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18) !important;
+    }
+
+    /* Important Steps Panel */
+    .important-steps-panel {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-left: 4.5px solid var(--brand-teal);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 2.5vw, 1.35rem);
+      margin-top: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .important-steps-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .important-steps-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin: 0;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .important-steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .important-steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .important-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 0.85rem;
+    }
+
+    .step-num-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--brand-navy);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .step-item-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .step-item-desc {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Pre-submission reminder */
+    .submission-pre-reminder {
+      background: #fdfaf3;
+      border: 1.5px dashed var(--gold-primary);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      font-size: 0.825rem;
+      color: #78350f;
+      line-height: 1.45;
+      margin-bottom: 1.15rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+    }
+
+    .submission-pre-reminder .icon {
+      width: 18px;
+      height: 18px;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* Choose file action button */
+    .btn-choose-file {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.6rem 1.15rem;
+      background: var(--brand-teal);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+      min-height: 44px;
+    }
+
+    .btn-choose-file:hover {
+      background: #032b2d;
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-instruction-subnote {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.65rem;
+      line-height: 1.45;
+    }
+
     .inst-list {
       list-style: none;
       display: flex;
@@ -2728,8 +2948,26 @@
         </div>
 
         <div class="booking-box">
+          <div class="booking-form-main-header">
+            <h3 class="booking-form-main-title">Complete Your Booking</h3>
+            <div class="booking-instruction-panel">
+              <div class="inst-icon-wrap" aria-hidden="true">
+                <svg class="icon" style="width: 15px; height: 15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+              </div>
+              <p>Please complete the required fields below, follow the payment instructions and submit your proof of payment on WhatsApp to complete your booking.</p>
+            </div>
+          </div>
+
           <form id="bookingForm" novalidate onsubmit="return false;">
             
+            <div class="form-required-legend">
+              <span class="required">*</span> Required fields — please complete all fields marked with an asterisk.
+            </div>
+
             <!-- Focus Selection -->
             <div class="form-group">
               <label class="form-label" for="trackSelect">
@@ -2757,18 +2995,23 @@
                   type="text" 
                   class="form-control" 
                   id="customerName" 
-                  placeholder="e.g. Kondwani Phiri" 
+                  placeholder="Enter your full name" 
                   required 
                   autocomplete="name"
                 />
+                <div class="field-error-msg" id="customerNameError" style="display: none;">
+                  <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Please enter your full name.</span>
+                </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="customerCountry">
                   Country of Residence <span class="required">*</span>
                 </label>
+                <div class="form-helper-text" style="margin-top: -0.25rem; margin-bottom: 0.35rem;">Choose the country where you currently live.</div>
                 <select class="form-control" id="customerCountry" required onchange="handleCountryChange(this.value)">
-                  <option value="" disabled selected>Select your country of residence *</option>
+                  <option value="" disabled selected>Select your country</option>
                   <option value="Zambia">Zambia</option>
                   <optgroup label="Popular / Regional">
                     <option value="Botswana">Botswana</option>
@@ -2873,6 +3116,10 @@
                     <option value="Other">Other Country</option>
                   </optgroup>
                 </select>
+                <div class="field-error-msg" id="customerCountryError" style="display: none;">
+                  <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Please select your country of residence.</span>
+                </div>
               </div>
             </div>
 
@@ -2881,14 +3128,19 @@
                 <label class="form-label" for="customerPhone">
                   WhatsApp Contact Number <span class="required">*</span>
                 </label>
+                <div class="form-helper-text" style="margin-top: -0.25rem; margin-bottom: 0.35rem;">We will send your calendar invitation and meeting link here.</div>
                 <input 
                   type="tel" 
                   class="form-control" 
                   id="customerPhone" 
-                  placeholder="e.g. +260 97X XXX XXX or international format" 
+                  placeholder="e.g. +260 97X XXX XXX or international format (+1, +44, +27...)" 
                   required 
                   autocomplete="tel"
                 />
+                <div class="field-error-msg" id="customerPhoneError" style="display: none;">
+                  <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Please enter your WhatsApp contact number.</span>
+                </div>
               </div>
 
               <div class="form-group">
@@ -2922,11 +3174,11 @@
               <div class="prep-step-header">
                 <div>
                   <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                    <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy); margin: 0;">Make the Most of Your Consultation!</h4>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy); margin: 0;">Attach Your Document (If Required)</h4>
                     <span class="prep-step-badge">48 Hours Notice</span>
                   </div>
-                  <p style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 0;">
-                    To help us prepare for a productive session, please submit a brief one-page introduction at least <strong>48 hours before your scheduled call</strong>.
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.35rem; margin-bottom: 0; line-height: 1.5;">
+                    Select a file from your device. Please check that you have attached the correct document before continuing.
                   </p>
                 </div>
               </div>
@@ -2951,7 +3203,7 @@
                     onclick="switchPrepOption('upload')"
                   >
                     <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                    <span>Option A: Upload 1-Page Document</span>
+                    <span>Option A: Upload Document</span>
                   </button>
                   <button 
                     type="button" 
@@ -2976,40 +3228,56 @@
                   style="display: none;" 
                   onchange="handlePrepFileSelected(event)"
                 />
+                
                 <div 
                   class="prep-upload-dropzone" 
                   id="prepDropzone" 
                   onclick="document.getElementById('prepFileInput').click()"
                   tabindex="0"
                   role="button"
-                  aria-label="Upload your one-page introduction document in PDF or Word DOCX format"
+                  aria-label="Select a file from your device"
                   onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('prepFileInput').click();}"
                 >
-                  <svg style="width: 28px; height: 28px; color: var(--brand-teal); margin-bottom: 0.35rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <line x1="12" y1="18" x2="12" y2="12"/>
-                    <line x1="9" y1="15" x2="12" y2="12"/>
-                    <line x1="15" y1="15" x2="12" y2="12"/>
+                  <svg style="width: 32px; height: 32px; color: var(--brand-teal); margin-bottom: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
                   </svg>
-                  <div style="font-weight: 800; color: var(--brand-navy); font-size: 0.9rem;">
-                    Upload Your One-Page Introduction
+                  
+                  <div style="margin-bottom: 0.45rem;">
+                    <button type="button" class="btn-choose-file" onclick="event.stopPropagation(); document.getElementById('prepFileInput').click();">
+                      <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      <span>Choose File / Upload Document</span>
+                    </button>
                   </div>
-                  <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">
-                    Supported formats: <strong>PDF, DOCX, DOC</strong> (Max 10MB)
+                  
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">
+                    or tap anywhere in this area to browse your files
                   </div>
-                  <div style="font-size: 0.725rem; color: var(--brand-teal); font-weight: 700; margin-top: 0.35rem;">
-                    Covers: About You • Your Idea/Business • Main Challenges • Goals
+                  
+                  <div style="font-size: 0.775rem; color: var(--brand-teal); font-weight: 700; margin-top: 0.45rem;">
+                    Accepted file formats: <strong>PDF, DOCX, DOC</strong> • Maximum file size: <strong>10MB</strong>
                   </div>
                 </div>
 
+                <!-- Error message for file selection -->
+                <div id="prepFileError" class="field-error-msg" style="display: none; margin-top: 0.5rem;">
+                  <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span id="prepFileErrorText">This file format is not supported. Please select an accepted file type (.pdf, .docx, .doc).</span>
+                </div>
+
                 <div class="prep-file-info" id="prepFileInfo">
-                  <div style="display: flex; align-items: center; gap: 0.5rem; overflow: hidden;">
-                    <svg style="width: 16px; height: 16px; color: #059669; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span style="font-weight: 700; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" id="prepFileName">document.pdf</span>
-                    <span style="color: #047857; font-size: 0.75rem;" id="prepFileSize">(0 KB)</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; overflow: hidden; max-width: 65%;">
+                    <svg style="width: 18px; height: 18px; color: #059669; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div style="overflow: hidden;">
+                      <div style="font-weight: 800; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #065f46;" id="prepFileName">document.pdf</div>
+                      <div style="color: #047857; font-size: 0.75rem;" id="prepFileSize">(0 KB)</div>
+                    </div>
                   </div>
-                  <button type="button" onclick="removePrepFile()" class="btn-text-danger" style="background:none; border:none; color:#dc2626; font-size:0.775rem; cursor:pointer; font-weight:700;">Remove</button>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;">
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('prepFileInput').click()" style="padding: 0.35rem 0.65rem; font-size: 0.75rem;">Replace File</button>
+                    <button type="button" onclick="removePrepFile()" class="btn-text-danger" style="background:none; border:none; color:#dc2626; font-size:0.775rem; cursor:pointer; font-weight:700; padding: 0.35rem;">Remove</button>
+                  </div>
                 </div>
               </div>
 
@@ -3189,6 +3457,46 @@
               </div>
             </div>
 
+            <!-- Payment and WhatsApp Instruction Panel -->
+            <div class="important-steps-panel">
+              <div class="important-steps-header">
+                <svg style="width: 22px; height: 22px; color: var(--gold-primary); flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <h4 class="important-steps-title">IMPORTANT: Complete Your Booking</h4>
+              </div>
+              <div class="important-steps-grid">
+                <div class="important-step-item">
+                  <span class="step-num-badge">1</span>
+                  <div>
+                    <div class="step-item-title">Step 1 — Complete the Form</div>
+                    <p class="step-item-desc">Enter your details and select your consultation.</p>
+                  </div>
+                </div>
+                <div class="important-step-item">
+                  <span class="step-num-badge">2</span>
+                  <div>
+                    <div class="step-item-title">Step 2 — Follow the Payment Instructions</div>
+                    <p class="step-item-desc">Complete the applicable payment process for your location.</p>
+                  </div>
+                </div>
+                <div class="important-step-item">
+                  <span class="step-num-badge">3</span>
+                  <div>
+                    <div class="step-item-title">Step 3 — Submit Proof of Payment</div>
+                    <p class="step-item-desc">Click the <strong>SUBMIT PROOF OF PAYMENT ON WHATSAPP</strong> button and send your payment receipt or screenshot through WhatsApp.</p>
+                  </div>
+                </div>
+                <div class="important-step-item">
+                  <span class="step-num-badge">4</span>
+                  <div>
+                    <div class="step-item-title">Step 4 — Wait for Confirmation</div>
+                    <p class="step-item-desc">Your booking will be confirmed once your payment has been received and verified and the appointment details have been confirmed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- Transaction Reference & WhatsApp Submit -->
             <div class="whatsapp-submit-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
@@ -3213,6 +3521,18 @@
                   id="txReference" 
                   placeholder="e.g. Transaction ID from Airtel Money or MTN MoMo SMS" 
                 />
+                <div class="field-error-msg" id="txRefError" style="display: none;">
+                  <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Please enter your Mobile Money transaction reference ID.</span>
+                </div>
+              </div>
+
+              <!-- Final Reminder Before Submission -->
+              <div class="submission-pre-reminder">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <span>Before submitting, please check that your details are correct. After following the payment instructions, remember to send your proof of payment through WhatsApp.</span>
               </div>
 
               <button 
@@ -3220,10 +3540,14 @@
                 class="btn btn-whatsapp btn-block" 
                 id="btnSubmitWhatsApp" 
                 onclick="handleWhatsAppProofSubmit()"
-                style="padding: 1rem; font-size: 1rem;"
+                style="padding: 1.05rem; font-size: 1rem; font-weight: 800; letter-spacing: 0.02em;"
               >
-                <span id="btnSubmitWhatsAppText">BOOK A ONE-ON-ONE CALL & SUBMIT PROOF</span>
+                <span id="btnSubmitWhatsAppText">SUBMIT PROOF OF PAYMENT ON WHATSAPP</span>
               </button>
+
+              <div class="whatsapp-instruction-subnote" style="margin-top: 0.65rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; text-align: center;">
+                * Opening WhatsApp will pre-fill your consultation details. Please attach your payment receipt or screenshot and tap <strong>Send</strong> inside WhatsApp to submit proof.
+              </div>
             </div>
 
             <!-- Verification Notice Banner -->
@@ -3676,12 +4000,59 @@
         dateInput.addEventListener("change", handleDateChange);
       }
 
+      // Real-time input error removal for required fields
+      const nameInput = document.getElementById("customerName");
+      const nameErr = document.getElementById("customerNameError");
+      if (nameInput) {
+        ['input', 'change', 'blur'].forEach(evt => {
+          nameInput.addEventListener(evt, () => {
+            if (nameInput.value.trim()) {
+              nameInput.classList.remove("is-invalid");
+              if (nameErr) nameErr.style.display = "none";
+            }
+          });
+        });
+      }
+
       const countrySelect = document.getElementById("customerCountry");
+      const countryErr = document.getElementById("customerCountryError");
       if (countrySelect) {
-        countrySelect.addEventListener("change", (e) => handleCountryChange(e.target.value));
+        countrySelect.addEventListener("change", (e) => {
+          if (countrySelect.value) {
+            countrySelect.classList.remove("is-invalid");
+            if (countryErr) countryErr.style.display = "none";
+          }
+          handleCountryChange(e.target.value);
+        });
         if (countrySelect.value) {
           handleCountryChange(countrySelect.value);
         }
+      }
+
+      const phoneInput = document.getElementById("customerPhone");
+      const phoneErr = document.getElementById("customerPhoneError");
+      if (phoneInput) {
+        ['input', 'change', 'blur'].forEach(evt => {
+          phoneInput.addEventListener(evt, () => {
+            if (phoneInput.value.trim() && phoneInput.value.trim().length >= 6) {
+              phoneInput.classList.remove("is-invalid");
+              if (phoneErr) phoneErr.style.display = "none";
+            }
+          });
+        });
+      }
+
+      const txInput = document.getElementById("txReference");
+      const txErr = document.getElementById("txRefError");
+      if (txInput) {
+        ['input', 'change', 'blur'].forEach(evt => {
+          txInput.addEventListener(evt, () => {
+            if (txInput.value.trim()) {
+              txInput.classList.remove("is-invalid");
+              if (txErr) txErr.style.display = "none";
+            }
+          });
+        });
       }
     });
 
@@ -3891,14 +4262,26 @@
     function processPrepFile(file) {
       const allowedExts = [".pdf", ".docx", ".doc"];
       const ext = file.name.substring(file.name.lastIndexOf(".")).toLowerCase();
+      const errBox = document.getElementById("prepFileError");
+      const errText = document.getElementById("prepFileErrorText");
+      const infoBox = document.getElementById("prepFileInfo");
+
       if (!allowedExts.includes(ext)) {
+        if (errText) errText.textContent = "This file format is not supported. Please select an accepted file type (.pdf, .docx, .doc).";
+        if (errBox) errBox.style.display = "flex";
+        if (infoBox) infoBox.style.display = "none";
         showToast("Please upload a PDF or Word document (.pdf, .docx, .doc)");
         return;
       }
       if (file.size > 10 * 1024 * 1024) {
+        if (errText) errText.textContent = "File size exceeds the 10MB limit. Please upload a smaller document.";
+        if (errBox) errBox.style.display = "flex";
+        if (infoBox) infoBox.style.display = "none";
         showToast("File size exceeds 10MB limit. Please upload a smaller file.");
         return;
       }
+
+      if (errBox) errBox.style.display = "none";
 
       uploadedPrepFile = {
         name: file.name,
@@ -3908,7 +4291,6 @@
 
       const nameEl = document.getElementById("prepFileName");
       const sizeEl = document.getElementById("prepFileSize");
-      const infoBox = document.getElementById("prepFileInfo");
 
       if (nameEl) nameEl.textContent = file.name;
       if (sizeEl) sizeEl.textContent = `(${uploadedPrepFile.size})`;
@@ -3923,7 +4305,9 @@
       if (fileInput) fileInput.value = "";
       const infoBox = document.getElementById("prepFileInfo");
       if (infoBox) infoBox.style.display = "none";
-      showToast("Uploaded document removed.");
+      const errBox = document.getElementById("prepFileError");
+      if (errBox) errBox.style.display = "none";
+      showToast("Attached document removed.");
     }
 
     function handleDateChange() {
@@ -4017,71 +4401,74 @@
         if (txInput) txInput.placeholder = "e.g. Transaction ID from Airtel Money or MTN MoMo SMS";
         if (submitHeading) submitHeading.textContent = "Submit Proof of Payment on WhatsApp";
         if (submitDesc) submitDesc.textContent = "Share your payment reference and attach your SMS confirmation directly in the chat.";
-        if (submitBtnText) submitBtnText.textContent = "BOOK A ONE-ON-ONE CALL & SUBMIT PROOF";
+        if (submitBtnText) submitBtnText.textContent = "SUBMIT PROOF OF PAYMENT ON WHATSAPP";
       } else {
         if (zambiaContainer) zambiaContainer.style.display = "none";
         if (intlNotice) intlNotice.style.display = "block";
         if (txRefGroup) txRefGroup.style.display = "none";
         if (submitHeading) submitHeading.textContent = "Submit International Consultation Request";
-        if (submitDesc) submitDesc.textContent = "Connect with us on WhatsApp to discuss payment arrangements tailored to your country and confirm your booking.";
-        if (submitBtnText) submitBtnText.textContent = "SUBMIT INTERNATIONAL BOOKING REQUEST";
+        if (submitDesc) submitDesc.textContent = "Connect with us on WhatsApp to discuss payment arrangements tailored to your country and submit your proof of payment.";
+        if (submitBtnText) submitBtnText.textContent = "SUBMIT PROOF OF PAYMENT ON WHATSAPP";
       }
     }
 
     function handleWhatsAppProofSubmit() {
       const nameInput = document.getElementById("customerName");
+      const nameErr = document.getElementById("customerNameError");
       const countryInput = document.getElementById("customerCountry");
+      const countryErr = document.getElementById("customerCountryError");
       const phoneInput = document.getElementById("customerPhone");
+      const phoneErr = document.getElementById("customerPhoneError");
       const dateInput = document.getElementById("preferredDate");
       const timeSelect = document.getElementById("preferredTime");
       const txInput = document.getElementById("txReference");
+      const txErr = document.getElementById("txRefError");
 
-      let valid = true;
+      let firstInvalid = null;
 
       if (!nameInput.value.trim()) {
         nameInput.classList.add("is-invalid");
-        valid = false;
+        if (nameErr) nameErr.style.display = "flex";
+        if (!firstInvalid) firstInvalid = nameInput;
       } else {
         nameInput.classList.remove("is-invalid");
+        if (nameErr) nameErr.style.display = "none";
       }
 
       if (!countryInput || !countryInput.value) {
         if (countryInput) countryInput.classList.add("is-invalid");
-        valid = false;
+        if (countryErr) countryErr.style.display = "flex";
+        if (!firstInvalid) firstInvalid = countryInput;
       } else {
         countryInput.classList.remove("is-invalid");
+        if (countryErr) countryErr.style.display = "none";
       }
 
       if (!phoneInput.value.trim() || phoneInput.value.trim().length < 6) {
         phoneInput.classList.add("is-invalid");
-        valid = false;
+        if (phoneErr) phoneErr.style.display = "flex";
+        if (!firstInvalid) firstInvalid = phoneInput;
       } else {
         phoneInput.classList.remove("is-invalid");
+        if (phoneErr) phoneErr.style.display = "none";
       }
 
-      if (!valid) {
-        if (!nameInput.value.trim()) {
-          showToast("Please provide your full name.");
-          nameInput.scrollIntoView({ behavior: "smooth", block: "center" });
-        } else if (!countryInput || !countryInput.value) {
-          showToast("Please select your Country of Residence.");
-          countryInput?.scrollIntoView({ behavior: "smooth", block: "center" });
-        } else {
-          showToast("Please provide your WhatsApp contact number.");
-          phoneInput.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-        return;
-      }
+      const isZambia = countryInput && countryInput.value === "Zambia";
 
-      const isZambia = countryInput.value === "Zambia";
-
-      if (isZambia && !txInput.value.trim()) {
+      if (isZambia && (!txInput.value.trim() || txInput.value.trim().length < 3)) {
         txInput.classList.add("is-invalid");
-        showToast("Please enter your Mobile Money transaction reference ID.");
-        txInput.scrollIntoView({ behavior: "smooth", block: "center" });
-        return;
+        if (txErr) txErr.style.display = "flex";
+        if (!firstInvalid) firstInvalid = txInput;
       } else {
         txInput.classList.remove("is-invalid");
+        if (txErr) txErr.style.display = "none";
+      }
+
+      if (firstInvalid) {
+        firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+        firstInvalid.focus();
+        showToast("Please complete all required fields marked with *");
+        return;
       }
 
       const track = ADVISORY_TRACKS.find(t => t.id === currentTrackId) || ADVISORY_TRACKS[0];
@@ -4090,7 +4477,7 @@
       const prefDate = dateInput.value ? dateInput.value : "Flexible";
       const prefTime = timeSelect.value ? timeSelect.value : "Flexible";
 
-      // Preparation Intro Logic
+      // Preparation Intro Summary Logic
       let prepSummaryMessage = "";
       let prepStatusHtml = "";
 
@@ -4126,36 +4513,38 @@
       let message = "";
       if (isZambia) {
         message = 
-`Hello Founder Capital, I would like to book a one-on-one founder advisory consultation.
+`Hello Founder Capital, I have submitted my booking request and would like to submit my proof of payment. My name is ${nameInput.value.trim()}, and my selected consultation is ${track.name} (${track.duration}).
 
-Name: ${nameInput.value.trim()}
-Country of Residence: Zambia
-WhatsApp Contact: ${phoneInput.value.trim()}
-Consultation Focus: ${track.name} (${track.duration})
-Payment Network: ${providerName}
-Fee: ${track.priceDisplay}
-Payment Reference: ${txRef}
-Preferred Timing: ${prefDate} (${prefTime})
+Booking Details:
+- Name: ${nameInput.value.trim()}
+- Country of Residence: Zambia
+- WhatsApp Contact: ${phoneInput.value.trim()}
+- Selected Consultation: ${track.name} (${track.duration})
+- Fee: ${track.priceDisplay}
+- Mobile Money Provider: ${providerName}
+- Transaction Reference / ID: ${txRef}
+- Preferred Timing: ${prefDate} (${prefTime})
 ${disclaimerNote}
 Consultation Preparation:
 ${prepSummaryMessage}
 
-I have attached my payment SMS receipt. Please verify my payment against the receiving account and issue my meeting link and calendar invitation. Thank you!`;
+I have attached my payment SMS receipt / screenshot. Please verify my payment against the receiving account and confirm my appointment. Thank you!`;
       } else {
         message = 
-`Hello Founder Capital, I would like to book a one-on-one founder advisory consultation.
+`Hello Founder Capital, I have submitted my booking request and would like to submit my proof of payment. My name is ${nameInput.value.trim()}, and my selected consultation is ${track.name} (${track.duration}).
 
-Name: ${nameInput.value.trim()}
-Country of Residence: ${countryInput.value.trim()}
-WhatsApp Contact: ${phoneInput.value.trim()}
-Consultation Focus: ${track.name} (${track.duration})
-Fee: ${track.priceDisplay}
-Preferred Timing: ${prefDate} (${prefTime})
+Booking Details:
+- Name: ${nameInput.value.trim()}
+- Country of Residence: ${countryInput.value.trim()}
+- WhatsApp Contact: ${phoneInput.value.trim()}
+- Selected Consultation: ${track.name} (${track.duration})
+- Fee: ${track.priceDisplay}
+- Preferred Timing: ${prefDate} (${prefTime})
 ${disclaimerNote}
 Consultation Preparation:
 ${prepSummaryMessage}
 
-I am an international client based in ${countryInput.value.trim()} and would like to arrange payment (e.g. via Mukuru, Western Union, Remitly, WorldRemit, or wire transfer) and confirm my appointment. Thank you!`;
+I am an international client based in ${countryInput.value.trim()} and would like to arrange payment (e.g. via Mukuru, Western Union, Remitly, WorldRemit, or wire transfer) and submit my proof of payment to confirm my appointment. Thank you!`;
       }
 
       const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -4167,10 +4556,10 @@ I am an international client based in ${countryInput.value.trim()} and would lik
 
       if (isZambia) {
         if (statusTitle) statusTitle.textContent = "Payment Submission Prepared";
-        if (statusText) statusText.textContent = "Thank you! Your consultation request has been prepared. Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation will then be issued directly to your WhatsApp.";
+        if (statusText) statusText.textContent = "Your booking request has been submitted successfully. Please follow the payment instructions and submit proof of payment through WhatsApp where applicable. Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation will then be issued directly to your WhatsApp.";
       } else {
-        if (statusTitle) statusTitle.textContent = "Thank you for your booking request!";
-        if (statusText) statusText.textContent = "We've received your consultation request. If you are based outside Zambia, we will contact you through WhatsApp to discuss the appropriate payment arrangements for your location. Your appointment will be confirmed once the necessary arrangements have been completed.";
+        if (statusTitle) statusTitle.textContent = "Booking Request Submitted";
+        if (statusText) statusText.textContent = "Your booking request has been submitted successfully. If you are based outside Zambia, we will contact you through WhatsApp to confirm the appropriate payment arrangements for your location and verify your proof of payment. Your appointment will be confirmed once payment is received.";
       }
 
       if (confirmPrepStatus) {
