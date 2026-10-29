@@ -785,6 +785,78 @@
       margin-top: 1.5rem;
     }
 
+    /* Final Conversion Callout: Don't See the Opportunity You're Looking For? */
+    .opportunity-cta-panel {
+      background: linear-gradient(135deg, #ffffff 0%, #f4fbfb 100%);
+      border: 1.5px solid #b2dbdd;
+      border-radius: var(--radius-xl);
+      padding: clamp(1.35rem, 3.5vw, 2.25rem);
+      margin: 2rem 0 1.5rem 0;
+      box-shadow: 0 10px 25px -5px rgba(4, 63, 66, 0.08), 0 8px 10px -6px rgba(4, 63, 66, 0.04);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .opportunity-cta-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--brand-teal) 0%, var(--gold-primary) 100%);
+    }
+
+    @media (min-width: 860px) {
+      .opportunity-cta-panel {
+        grid-template-columns: 1fr auto;
+        gap: 2.5rem;
+        padding: 2.25rem 2.75rem;
+      }
+    }
+
+    .opp-cta-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-teal);
+      background: #eef7f8;
+      border: 1px solid #b2dbdd;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.65rem;
+    }
+
+    .opp-cta-title {
+      font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .opp-cta-text {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0;
+    }
+
+    .opp-cta-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
     /* =======================================================================
        SECTION 3: HOW FOUNDER CAPITAL HELPS
        ======================================================================= */
@@ -1448,6 +1520,50 @@
       border-color: #10b981;
     }
 
+    /* International Payment Notice & Dual Currency Badges */
+    .international-notice-card {
+      background: #fdfaf3;
+      border: 1.5px solid var(--gold-border);
+      border-left: 4.5px solid var(--gold-primary);
+      border-radius: var(--radius-md);
+      padding: 1.25rem clamp(1rem, 2.5vw, 1.35rem);
+      margin-bottom: 1.35rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .intl-notice-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      background: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .price-dual {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .price-zmw {
+      font-weight: 800;
+    }
+
+    .price-divider {
+      opacity: 0.5;
+      font-weight: 400;
+      margin: 0 0.15rem;
+    }
+
+    .price-usd {
+      font-weight: 800;
+      color: var(--brand-teal);
+    }
+
     .inst-list {
       list-style: none;
       display: flex;
@@ -1501,6 +1617,203 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =======================================================================
+       CONSULTATION PREPARATION & DISCLAIMER COMPONENTS
+       ======================================================================= */
+    .service-disclaimer-box {
+      background: #f0f7f7;
+      border: 1px solid #b2dbdd;
+      border-left: 3.5px solid var(--brand-teal);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: #043f42;
+    }
+
+    .service-disclaimer-box strong {
+      color: #043f42;
+      font-weight: 800;
+    }
+
+    .prep-note-details {
+      margin-top: 0.65rem;
+      background: var(--bg-body);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .prep-note-summary {
+      padding: 0.45rem 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 700;
+      color: var(--brand-teal);
+      user-select: none;
+      transition: background 0.2s ease, color 0.2s ease;
+      font-size: 0.775rem;
+    }
+
+    .prep-note-summary:hover {
+      background: #eef7f8;
+      color: var(--brand-navy);
+    }
+
+    .prep-note-body {
+      padding: 0.75rem 0.85rem;
+      border-top: 1px solid var(--border-light);
+      background: #ffffff;
+      color: var(--text-body);
+      line-height: 1.5;
+      font-size: 0.8rem;
+    }
+
+    .prep-note-body h6 {
+      font-size: 0.825rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .prep-note-body ul {
+      margin: 0.4rem 0 0.5rem 1.15rem;
+      padding: 0;
+      font-size: 0.775rem;
+      color: var(--text-muted);
+      list-style-type: disc;
+    }
+
+    .prep-note-body li {
+      margin-bottom: 0.25rem;
+    }
+
+    .prep-note-body li strong {
+      color: var(--brand-navy);
+    }
+
+    /* Consultation Preparation Module inside Booking Form */
+    .prep-step-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 2.5vw, 1.45rem);
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .prep-step-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .prep-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.725rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .prep-urgent-warning {
+      display: none;
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-left: 3.5px solid #d97706;
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 1rem;
+      font-size: 0.825rem;
+      line-height: 1.45;
+      color: #92400e;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .prep-options-nav {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .prep-options-nav {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .prep-option-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      min-height: 48px;
+      background: var(--bg-body);
+      border: 2px solid var(--border-light);
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .prep-option-btn.active {
+      border-color: var(--brand-teal);
+      background: #f0f8f8;
+      color: var(--brand-teal);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .prep-upload-dropzone {
+      border: 2px dashed #b2dbdd;
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.25rem;
+      text-align: center;
+      background: #fafdfd;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .prep-upload-dropzone:hover, .prep-upload-dropzone.dragover {
+      border-color: var(--brand-teal);
+      background: #f0f9fa;
+    }
+
+    .prep-upload-dropzone:focus-visible {
+      outline: 2px solid var(--brand-teal);
+    }
+
+    .prep-file-info {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      margin-top: 0.75rem;
+      font-size: 0.825rem;
+      color: #065f46;
     }
 
     /* =======================================================================
@@ -1928,16 +2241,17 @@
         
         <div class="section-header">
           <div class="section-eyebrow">International Grants & Fellowships</div>
-          <h2 class="section-title">FUNDING OPPORTUNITIES EXIST. <span class="text-teal">LET'S HELP YOU FIND THE RIGHT FIT.</span></h2>
-          <p class="section-description">
-            International programmes support entrepreneurs, innovators and social impact businesses with funding, mentorship, fellowships and professional networks. Finding suitable programmes and presenting a compelling application can be challenging. Founder Capital helps you navigate the process with practical, personalised guidance.
+          <h2 class="section-title">EXPLORE FUNDING & <span class="text-teal">FELLOWSHIP OPPORTUNITIES</span></h2>
+          <p class="section-description" style="max-width: 680px; margin-inline: auto;">
+            We've helped entrepreneurs understand funding opportunities, strengthen their applications and prepare to present their ideas with confidence.<br /><br />
+            Some of the programmes we have experience with include:
           </p>
         </div>
 
-        <!-- 6 High-Impact Programme Cards -->
+        <!-- Featured Programme Cards -->
         <div class="opportunities-grid">
           
-          <!-- 1. Echoing Green -->
+          <!-- 1. Echoing Green Fellowship -->
           <div class="opportunity-card">
             <div>
               <div class="opp-badge-row">
@@ -1947,7 +2261,7 @@
               <h3>Echoing Green Fellowship</h3>
               <div class="opp-amount-highlight">Up to US$100,000</div>
               <p class="opp-description">
-                Unrestricted seed funding, leadership development, executive coaching, and lifetime access to a worldwide network of high-impact leaders.
+                Up to US$100,000 for eligible social entrepreneurs, subject to the applicable fellowship terms and funding structure.
               </p>
             </div>
             <div class="opp-disclaimer-note">
@@ -1965,7 +2279,7 @@
               <h3>Tony Elumelu Foundation</h3>
               <div class="opp-amount-highlight">US$5,000 Seed Capital</div>
               <p class="opp-description">
-                Non-refundable seed funding, 12 weeks of intensive business management training, and mentorship for selected eligible African entrepreneurs across 54 countries.
+                US$5,000 in seed capital for selected eligible African entrepreneurs under the relevant programme cycle.
               </p>
             </div>
             <div class="opp-disclaimer-note">
@@ -1973,25 +2287,43 @@
             </div>
           </div>
 
-          <!-- 3. Bayer Foundation -->
+          <!-- 3. Ashoka Fellowship -->
+          <div class="opportunity-card">
+            <div>
+              <div class="opp-badge-row">
+                <span class="opp-audience-tag">Social Innovators</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Global Fellowship</span>
+              </div>
+              <h3>Ashoka Fellowship</h3>
+              <div class="opp-amount-highlight">Global Fellowship Support</div>
+              <p class="opp-description">
+                A global fellowship supporting selected social entrepreneurs creating systemic change.
+              </p>
+            </div>
+            <div class="opp-disclaimer-note">
+              Subject to applicable Ashoka selection terms and fellowship guidelines.
+            </div>
+          </div>
+
+          <!-- 4. Bayer Foundation Women Entrepreneurs Award -->
           <div class="opportunity-card">
             <div>
               <div class="opp-badge-row">
                 <span class="opp-audience-tag">Women-Led Impact</span>
-                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Empowerment Award</span>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Impact Award</span>
               </div>
-              <h3>Bayer Foundation Award</h3>
-              <div class="opp-amount-highlight">€25,000 in Funding</div>
+              <h3>Bayer Foundation Women Entrepreneurs Award</h3>
+              <div class="opp-amount-highlight">Funding & Venture Support</div>
               <p class="opp-description">
-                Financial awards, tailored accelerator coaching, and global network visibility for female impact innovators driving breakthrough solutions in health and nutrition.
+                Funding and support for eligible women-led ventures, subject to the relevant award category and application cycle.
               </p>
             </div>
             <div class="opp-disclaimer-note">
-              Subject to applicable award category and annual cycle guidelines.
+              Subject to relevant award category and annual application guidelines.
             </div>
           </div>
 
-          <!-- 4. Cartier Women's Initiative -->
+          <!-- 5. Cartier Women's Initiative (Preserved Placeholder) -->
           <div class="opportunity-card">
             <div>
               <div class="opp-badge-row">
@@ -2009,25 +2341,7 @@
             </div>
           </div>
 
-          <!-- 5. Ashoka Fellowship -->
-          <div class="opportunity-card">
-            <div>
-              <div class="opp-badge-row">
-                <span class="opp-audience-tag">Systemic Change</span>
-                <span style="font-size: 0.75rem; font-weight: 700; color: var(--gold-primary);">Lifetime Fellowship</span>
-              </div>
-              <h3>Ashoka Fellowship</h3>
-              <div class="opp-amount-highlight">Fellowship & Global Network</div>
-              <p class="opp-description">
-                Tailored financial stipend support, global peer networks, strategic partnership introductions, and pro-bono legal/business resources for systemic social entrepreneurs.
-              </p>
-            </div>
-            <div class="opp-disclaimer-note">
-              Stipend and support structured based on individual founder needs.
-            </div>
-          </div>
-
-          <!-- 6. MIT Solve -->
+          <!-- 6. MIT Solve Global Challenges (Preserved Placeholder) -->
           <div class="opportunity-card">
             <div>
               <div class="opp-badge-row">
@@ -2037,7 +2351,7 @@
               <h3>MIT Solve Global Challenges</h3>
               <div class="opp-amount-highlight">Challenge-Based Funding</div>
               <p class="opp-description">
-                Access to over US$1,000,000 in pooled challenge funding annually, 9-month solver incubator programme, and strategic partnerships across the MIT ecosystem.
+                Access to pooled challenge funding, 9-month solver incubator programme, and strategic cross-sector partnerships across the MIT ecosystem.
               </p>
             </div>
             <div class="opp-disclaimer-note">
@@ -2047,12 +2361,32 @@
 
         </div>
 
-        <!-- Action Button -->
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <a href="#booking" class="btn btn-gold" style="padding: 0.95rem 2.2rem; font-size: 1rem;">
-            <span>EXPLORE FUNDING OPPORTUNITIES</span>
-            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <!-- ============================================================= -->
+        <!-- FINAL CONVERSION PANEL: DON'T SEE THE OPPORTUNITY?             -->
+        <!-- ============================================================= -->
+        <div class="opportunity-cta-panel">
+          <div class="opp-cta-content">
+            <div class="opp-cta-badge">Custom Programme Review</div>
+            <h3 class="opp-cta-title">Don't See the Opportunity You're Looking For?</h3>
+            <p class="opp-cta-text">
+              Have you found a grant, fellowship or funding programme you'd love to apply for?<br /><br />
+              Send us the details! We'll review the opportunity together, assess whether it's the right fit for you and help you understand what it takes to put together a strong application.
+            </p>
+          </div>
+          <div class="opp-cta-action">
+            <button 
+              type="button" 
+              class="btn btn-gold" 
+              onclick="selectTrackAndScroll('funding-fellowships')"
+              style="padding: 1rem 1.85rem; font-size: 0.95rem; white-space: nowrap; box-shadow: 0 10px 20px rgba(4, 63, 66, 0.15);"
+            >
+              <span>BOOK AN APPLICATION REVIEW</span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div style="font-size: 0.775rem; color: var(--text-subtle); margin-top: 0.5rem; text-align: center;">
+              K500 • 60-min 1-on-1 Strategy & Review Call
+            </div>
+          </div>
         </div>
 
         <!-- Required Disclaimer Banner -->
@@ -2061,7 +2395,7 @@
             <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
           </svg>
           <div>
-            <strong>Funding and Independence Disclaimer:</strong> Funding and fellowship opportunities are competitive, subject to eligibility requirements and application cycles, and are not guaranteed. Award amounts, eligibility and availability may change. Founder Capital is an independent advisory service and is not affiliated with, endorsed by or acting on behalf of the programmes listed.
+            <strong>Funding and Independence Disclaimer:</strong> Funding and fellowship opportunities are competitive, subject to eligibility requirements and application cycles, and are not guaranteed. Award amounts, eligibility and availability may change. Founder Capital is an independent advisory service and is not affiliated with, endorsed by or officially representing any of the third-party programmes listed.
           </div>
         </div>
 
@@ -2430,6 +2764,120 @@
               </div>
 
               <div class="form-group">
+                <label class="form-label" for="customerCountry">
+                  Country of Residence <span class="required">*</span>
+                </label>
+                <select class="form-control" id="customerCountry" required onchange="handleCountryChange(this.value)">
+                  <option value="" disabled selected>Select your country of residence *</option>
+                  <option value="Zambia">Zambia</option>
+                  <optgroup label="Popular / Regional">
+                    <option value="Botswana">Botswana</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </optgroup>
+                  <optgroup label="All Countries (A-Z)">
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                    <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Eswatini">Eswatini (Swaziland)</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="Other">Other Country</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
                 <label class="form-label" for="customerPhone">
                   WhatsApp Contact Number <span class="required">*</span>
                 </label>
@@ -2437,14 +2885,12 @@
                   type="tel" 
                   class="form-control" 
                   id="customerPhone" 
-                  placeholder="e.g. +260 97X XXX XXX or 096X XXX XXX" 
+                  placeholder="e.g. +260 97X XXX XXX or international format" 
                   required 
                   autocomplete="tel"
                 />
               </div>
-            </div>
 
-            <div class="form-grid-2">
               <div class="form-group">
                 <label class="form-label" for="preferredDate">
                   Preferred Date (Optional)
@@ -2455,30 +2901,185 @@
                   id="preferredDate" 
                 />
               </div>
-
-              <div class="form-group">
-                <label class="form-label" for="preferredTime">
-                  Preferred Time Slot (Optional)
-                </label>
-                <select class="form-control" id="preferredTime">
-                  <option value="">Any time is fine</option>
-                  <option value="Morning (09:00 - 12:00 CAT)">Morning (09:00 - 12:00 CAT)</option>
-                  <option value="Afternoon (13:00 - 16:00 CAT)">Afternoon (13:00 - 16:00 CAT)</option>
-                  <option value="Evening (17:00 - 19:00 CAT)">Evening (17:00 - 19:00 CAT)</option>
-                </select>
-              </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="customerNotes">
-                Briefly Describe Your Business, Opportunity or Goals (Optional)
+              <label class="form-label" for="preferredTime">
+                Preferred Time Slot (Optional)
               </label>
-              <textarea 
-                class="form-control" 
-                id="customerNotes" 
-                rows="2" 
-                placeholder="Mention specific grants you are targeting, speaking topics, or challenges you'd like to address..."
-              ></textarea>
+              <select class="form-control" id="preferredTime">
+                <option value="">Any time is fine</option>
+                <option value="Morning (09:00 - 12:00 CAT)">Morning (09:00 - 12:00 CAT)</option>
+                <option value="Afternoon (13:00 - 16:00 CAT)">Afternoon (13:00 - 16:00 CAT)</option>
+                <option value="Evening (17:00 - 19:00 CAT)">Evening (17:00 - 19:00 CAT)</option>
+              </select>
+            </div>
+
+            <!-- ======================================================= -->
+            <!-- PREPARING FOR YOUR CONSULTATION (48-HOUR NOTICE)         -->
+            <!-- ======================================================= -->
+            <div class="prep-step-card" id="prepStepCard">
+              <div class="prep-step-header">
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy); margin: 0;">Make the Most of Your Consultation!</h4>
+                    <span class="prep-step-badge">48 Hours Notice</span>
+                  </div>
+                  <p style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 0;">
+                    To help us prepare for a productive session, please submit a brief one-page introduction at least <strong>48 hours before your scheduled call</strong>.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Polite reminder if user books < 48 hours -->
+              <div class="prep-urgent-warning" id="prepUrgentWarning">
+                <strong>⏳ Short Notice Booking:</strong> You have selected a session within 48 hours. Please submit your one-page introduction or written details immediately so your advisor has time to review your background before your call.
+              </div>
+
+              <!-- Options Selection (Option A vs Option B) -->
+              <div style="margin-bottom: 0.85rem;">
+                <label class="form-label" style="font-size: 0.825rem; margin-bottom: 0.45rem;">
+                  Choose How to Submit Your 1-Page Introduction:
+                </label>
+                <div class="prep-options-nav" role="tablist">
+                  <button 
+                    type="button" 
+                    class="prep-option-btn active" 
+                    id="tabPrepUpload" 
+                    role="tab" 
+                    aria-selected="true" 
+                    onclick="switchPrepOption('upload')"
+                  >
+                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span>Option A: Upload 1-Page Document</span>
+                  </button>
+                  <button 
+                    type="button" 
+                    class="prep-option-btn" 
+                    id="tabPrepWrite" 
+                    role="tab" 
+                    aria-selected="false" 
+                    onclick="switchPrepOption('write')"
+                  >
+                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    <span>Option B: Complete Short Form</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Option A: Upload Panel -->
+              <div id="prepUploadContainer">
+                <input 
+                  type="file" 
+                  id="prepFileInput" 
+                  accept=".pdf,.docx,.doc" 
+                  style="display: none;" 
+                  onchange="handlePrepFileSelected(event)"
+                />
+                <div 
+                  class="prep-upload-dropzone" 
+                  id="prepDropzone" 
+                  onclick="document.getElementById('prepFileInput').click()"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Upload your one-page introduction document in PDF or Word DOCX format"
+                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('prepFileInput').click();}"
+                >
+                  <svg style="width: 28px; height: 28px; color: var(--brand-teal); margin-bottom: 0.35rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="12" y1="18" x2="12" y2="12"/>
+                    <line x1="9" y1="15" x2="12" y2="12"/>
+                    <line x1="15" y1="15" x2="12" y2="12"/>
+                  </svg>
+                  <div style="font-weight: 800; color: var(--brand-navy); font-size: 0.9rem;">
+                    Upload Your One-Page Introduction
+                  </div>
+                  <div style="font-size: 0.775rem; color: var(--text-muted); margin-top: 0.25rem;">
+                    Supported formats: <strong>PDF, DOCX, DOC</strong> (Max 10MB)
+                  </div>
+                  <div style="font-size: 0.725rem; color: var(--brand-teal); font-weight: 700; margin-top: 0.35rem;">
+                    Covers: About You • Your Idea/Business • Main Challenges • Goals
+                  </div>
+                </div>
+
+                <div class="prep-file-info" id="prepFileInfo">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; overflow: hidden;">
+                    <svg style="width: 16px; height: 16px; color: #059669; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span style="font-weight: 700; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" id="prepFileName">document.pdf</span>
+                    <span style="color: #047857; font-size: 0.75rem;" id="prepFileSize">(0 KB)</span>
+                  </div>
+                  <button type="button" onclick="removePrepFile()" class="btn-text-danger" style="background:none; border:none; color:#dc2626; font-size:0.775rem; cursor:pointer; font-weight:700;">Remove</button>
+                </div>
+              </div>
+
+              <!-- Option B: Written Form Panel -->
+              <div id="prepWriteContainer" style="display: none;">
+                <div style="font-size: 0.775rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.45;">
+                  Please provide brief responses to help us understand your needs beforehand and make the best use of your consultation time.
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 0.75rem;">
+                  <label class="form-label" for="prepAbout" style="font-size: 0.825rem;">
+                    1. Tell us a little about yourself and your background
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="prepAbout" 
+                    rows="2" 
+                    placeholder="Brief background, professional experience or founder journey..."
+                  ></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0.75rem;">
+                  <label class="form-label" for="prepBusiness" style="font-size: 0.825rem;">
+                    2. Describe your business, innovation or idea
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="prepBusiness" 
+                    rows="2" 
+                    placeholder="Tell us about your venture, even if still at an early idea stage..."
+                  ></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0.75rem;">
+                  <label class="form-label" for="prepChallenges" style="font-size: 0.825rem;">
+                    3. What are the main challenges you are facing?
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="prepChallenges" 
+                    rows="2" 
+                    placeholder="Main difficulties, questions, or opportunities you are navigating..."
+                  ></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0.75rem;">
+                  <label class="form-label" for="prepGoals" style="font-size: 0.825rem;">
+                    4. What would you like to achieve from this consultation?
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="prepGoals" 
+                    rows="2" 
+                    placeholder="Key objectives, clarity, or outcomes you want to achieve..."
+                  ></textarea>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0.25rem;">
+                  <label class="form-label" for="prepTargetProgram" style="font-size: 0.825rem;">
+                    Specific Opportunity or Programme Link <span style="font-weight: 400; color: var(--text-muted);">(Optional — for grant/fellowship application reviews)</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="prepTargetProgram" 
+                    placeholder="e.g. Echoing Green, Africa Prize, or paste opportunity link..."
+                  />
+                </div>
+              </div>
+
             </div>
 
             <!-- Price Summary Banner -->
@@ -2496,58 +3097,95 @@
               </div>
             </div>
 
-            <!-- Mobile Money Selector (Airtel Money & MTN MoMo with verified *115#) -->
-            <div class="form-group">
-              <label class="form-label">
-                Select Mobile Money Network <span class="required">*</span>
-              </label>
-              <div class="provider-selection-row">
-                <button type="button" class="provider-pill-btn active" data-provider="airtel" id="tabAirtel" onclick="selectProvider('airtel')">
-                  <span class="provider-badge badge-airtel">Airtel</span>
-                  <span>Airtel Money</span>
-                </button>
-                <button type="button" class="provider-pill-btn" data-provider="mtn" id="tabMtn" onclick="selectProvider('mtn')">
-                  <span class="provider-badge badge-mtn">MTN</span>
-                  <span>MTN Mobile Money</span>
-                </button>
+            <!-- Dynamic Disclaimer Banner for Financial Review & Due Diligence Preparation -->
+            <div id="trackSummaryDisclaimer" class="service-disclaimer-box" style="display: none; margin-bottom: 1.25rem;"></div>
+
+            <!-- International Client Payment Notice (Shown conditionally when a non-Zambian country is selected) -->
+            <div class="international-notice-card" id="internationalPaymentNotice" style="display: none;">
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div class="intl-notice-icon">
+                  <svg style="width: 22px; height: 22px; color: var(--gold-primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy); margin: 0;">International Consultation Booking</h4>
+                    <span style="font-size: 0.75rem; font-weight: 800; background: var(--gold-light); color: var(--gold-primary); border: 1px solid var(--gold-border); padding: 0.15rem 0.6rem; border-radius: var(--radius-full);">Global Client Service</span>
+                  </div>
+                  <p style="font-size: 0.95rem; color: #78350f; font-weight: 800; margin-bottom: 0.45rem; line-height: 1.5;">
+                    International clients: Payment arrangements will be shared after your booking request is received.
+                  </p>
+                  <p style="font-size: 0.85rem; color: var(--text-body); line-height: 1.55; margin-bottom: 0.5rem;">
+                    Because our entrepreneurs and founders join from across Africa, the UK, Europe, the US and beyond, you do not need Zambian mobile money networks. We will contact you through WhatsApp to discuss the appropriate payment arrangements for your location (including services like <strong>Mukuru, Western Union, Remitly, WorldRemit</strong>, or international bank transfer).
+                  </p>
+                  <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+                    Your appointment will be confirmed once the necessary arrangements have been completed.
+                  </p>
+                </div>
               </div>
+            </div>
 
-              <!-- Payment Instructions Box (CORRECTED USSD TO *115# FOR BOTH) -->
-              <div class="payment-instruction-box">
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
-                  <h5 style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);" id="currentProviderLabel">
-                    Airtel Money Transfer Instructions
-                  </h5>
-                  <span style="font-size: 0.75rem; color: var(--gold-primary); font-weight: 700;">Manual Account Transfer</span>
+            <!-- Zambian Payment Container (Airtel Money & MTN MoMo with verified *115#) -->
+            <div id="zambiaPaymentContainer">
+              <div class="form-group">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.45rem;">
+                  <label class="form-label" style="margin-bottom: 0;">
+                    Select Mobile Money Network <span class="required">*</span>
+                  </label>
+                  <span style="font-size: 0.75rem; color: var(--text-subtle);">Zambian Clients (Local Transfer)</span>
+                </div>
+                
+                <div class="provider-selection-row">
+                  <button type="button" class="provider-pill-btn active" data-provider="airtel" id="tabAirtel" onclick="selectProvider('airtel')">
+                    <span class="provider-badge badge-airtel">Airtel</span>
+                    <span>Airtel Money</span>
+                  </button>
+                  <button type="button" class="provider-pill-btn" data-provider="mtn" id="tabMtn" onclick="selectProvider('mtn')">
+                    <span class="provider-badge badge-mtn">MTN</span>
+                    <span>MTN Mobile Money</span>
+                  </button>
                 </div>
 
-                <div class="copyable-grid">
-                  <div class="copyable-card">
-                    <div>
-                      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Recipient Name</div>
-                      <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">Muzalema Mwanza</div>
-                    </div>
-                    <button type="button" class="copy-btn" aria-label="Copy Recipient Name" onclick="copyToClipboard('Muzalema Mwanza', this)">
-                      <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                      <span>Copy</span>
-                    </button>
+                <!-- Payment Instructions Box (CORRECTED USSD TO *115# FOR BOTH) -->
+                <div class="payment-instruction-box">
+                  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);">
+                    <h5 style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);" id="currentProviderLabel">
+                      Airtel Money Transfer Instructions
+                    </h5>
+                    <span style="font-size: 0.75rem; color: var(--gold-primary); font-weight: 700;">Manual Account Transfer</span>
                   </div>
 
-                  <div class="copyable-card">
-                    <div>
-                      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Payment Mobile Number</div>
-                      <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">+260 962 807 622</div>
+                  <div class="copyable-grid">
+                    <div class="copyable-card">
+                      <div>
+                        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Recipient Name</div>
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">Muzalema Mwanza</div>
+                      </div>
+                      <button type="button" class="copy-btn" aria-label="Copy Recipient Name" onclick="copyToClipboard('Muzalema Mwanza', this)">
+                        <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        <span>Copy</span>
+                      </button>
                     </div>
-                    <button type="button" class="copy-btn" aria-label="Copy Payment Phone Number" onclick="copyToClipboard('+260962807622', this)">
-                      <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                      <span>Copy</span>
-                    </button>
+
+                    <div class="copyable-card">
+                      <div>
+                        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); font-weight: 700;">Payment Mobile Number</div>
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--brand-navy);">+260 962 807 622</div>
+                      </div>
+                      <button type="button" class="copy-btn" aria-label="Copy Payment Phone Number" onclick="copyToClipboard('+260962807622', this)">
+                        <svg class="icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        <span>Copy</span>
+                      </button>
+                    </div>
                   </div>
+
+                  <ul class="inst-list" id="providerStepList">
+                    <!-- Rendered dynamically -->
+                  </ul>
                 </div>
-
-                <ul class="inst-list" id="providerStepList">
-                  <!-- Rendered dynamically -->
-                </ul>
               </div>
             </div>
 
@@ -2560,14 +3198,14 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy);">Submit Proof of Payment on WhatsApp</h4>
-                  <p style="font-size: 0.825rem; color: var(--text-muted);">Share your payment reference and attach your SMS confirmation directly in the chat.</p>
+                  <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy);" id="submitCardHeading">Submit Proof of Payment on WhatsApp</h4>
+                  <p style="font-size: 0.825rem; color: var(--text-muted);" id="submitCardDescription">Share your booking details and consultation background directly in the chat.</p>
                 </div>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="txReference">
-                  Transaction Reference / ID <span class="required">*</span>
+              <div class="form-group" id="txRefGroup">
+                <label class="form-label" for="txReference" id="txRefLabel">
+                  Transaction Reference / ID <span class="required" id="txRefRequired">*</span>
                 </label>
                 <input 
                   type="text" 
@@ -2584,18 +3222,21 @@
                 onclick="handleWhatsAppProofSubmit()"
                 style="padding: 1rem; font-size: 1rem;"
               >
-                <span>BOOK A ONE-ON-ONE CALL & SUBMIT PROOF</span>
+                <span id="btnSubmitWhatsAppText">BOOK A ONE-ON-ONE CALL & SUBMIT PROOF</span>
               </button>
             </div>
 
             <!-- Verification Notice Banner -->
             <div class="verification-status-card" id="verificationStatusCard">
-              <div style="font-weight: 800; color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 0.5rem;">
+              <div style="font-weight: 800; color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 0.5rem;" id="verificationStatusTitle">
                 Payment Submission Prepared
               </div>
-              <p style="font-size: 0.9rem; color: #78350f; max-width: 620px; margin: 0 auto; line-height: 1.55;">
+              <p style="font-size: 0.9rem; color: #78350f; max-width: 620px; margin: 0 auto; line-height: 1.55;" id="verificationStatusText">
                 Thank you! Your consultation request has been prepared. Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation will then be issued directly to your WhatsApp.
               </p>
+              <div id="confirmPrepStatus" style="margin-top: 0.85rem; padding: 0.75rem 1rem; background: #ffffff; border-radius: var(--radius-sm); border: 1px solid var(--gold-border); font-size: 0.825rem; color: #78350f; text-align: left;">
+                <!-- dynamic file or written summary confirmation -->
+              </div>
             </div>
 
           </form>
@@ -2612,9 +3253,51 @@
         
         <div class="section-header">
           <div class="section-eyebrow">Clear Consultation Rates</div>
-          <h2 class="section-title">PROPOSED BOOKING & <span class="text-teal">PRICING SHEET</span></h2>
+          <h2 class="section-title">BOOKING & <span class="text-teal">PRICING SHEET</span></h2>
           <p class="section-description">
-            Transparent, upfront advisory fees in Zambian Kwacha (K/ZMW). No hidden surprises.
+            Transparent consultation fees for entrepreneurs. No hidden surprises.
+          </p>
+        </div>
+
+        <!-- Consultation Preparation Guidance Overview Card -->
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-left: 4.5px solid var(--gold-primary); border-radius: var(--radius-lg); padding: clamp(1.15rem, 2.5vw, 1.5rem); margin-bottom: 1.75rem; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <svg style="width: 22px; height: 22px; color: var(--gold-primary); flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--brand-navy); margin: 0;">Make the Most of Your Consultation!</h3>
+            </div>
+            <span style="font-size: 0.75rem; font-weight: 800; background: var(--gold-light); color: var(--gold-primary); border: 1px solid var(--gold-border); padding: 0.2rem 0.65rem; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 0.04em;">
+              48 Hours Notice
+            </span>
+          </div>
+
+          <p style="font-size: 0.875rem; color: var(--text-body); margin-bottom: 0.85rem; line-height: 1.55;">
+            To help us prepare for a productive session, please submit a brief one-page introduction at least <strong>48 hours before your scheduled call</strong>, covering:
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">
+            <div style="background: var(--bg-body); padding: 0.75rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <div style="font-size: 0.825rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 0.2rem;">• About You</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">A little about yourself and your background.</div>
+            </div>
+            <div style="background: var(--bg-body); padding: 0.75rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <div style="font-size: 0.825rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 0.2rem;">• Your Idea or Business</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">Tell us about your business, innovation or idea, even if it is still at an early stage.</div>
+            </div>
+            <div style="background: var(--bg-body); padding: 0.75rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <div style="font-size: 0.825rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 0.2rem;">• Your Main Challenges</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">Explain the main difficulties, questions or opportunities you are currently navigating.</div>
+            </div>
+            <div style="background: var(--bg-body); padding: 0.75rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <div style="font-size: 0.825rem; font-weight: 800; color: var(--brand-teal); margin-bottom: 0.2rem;">• Your Goals</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">Tell us what you would like to achieve from the consultation.</div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0; line-height: 1.5;">
+            This information helps us understand your needs beforehand and make the best use of your consultation time. Every booking option below includes this preparation guidance, and you can submit your details via document upload or simple written response during booking.
           </p>
         </div>
 
@@ -2627,7 +3310,7 @@
               <tr>
                 <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Advisory Track</th>
                 <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Scope & Duration</th>
-                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Price (ZMW)</th>
+                <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light);">Price (ZMW / USD)</th>
                 <th style="padding: 0.85rem 1rem; font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); border-bottom: 2px solid var(--border-light); text-align: right;">Action</th>
               </tr>
             </thead>
@@ -2712,7 +3395,7 @@
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              Not necessarily. While certain international fellowships require an operational business or proven traction, our Discovery Call (K250) is specifically designed for early-stage founders with an idea who need someone experienced to help them brainstorm, test assumptions, and clarify next steps.
+              Not necessarily. While certain international fellowships require an operational business or proven traction, our Discovery Call (K250 / US$15) is specifically designed for early-stage founders with an idea who need someone experienced to help them brainstorm, test assumptions, and clarify next steps.
             </div>
           </div>
 
@@ -2722,7 +3405,7 @@
               <svg class="icon faq-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">
-              Simply choose your consultation focus on this page, enter your contact information, send the mobile money fee via Airtel Money (*115#) or MTN Mobile Money (*115#), and submit your reference on WhatsApp. Once payment is verified against the receiving account, your calendar invitation and virtual meeting link will be issued.
+              Simply choose your consultation focus on this page, enter your contact information and country of residence. If you are based in Zambia, you can complete payment via Airtel Money or MTN Mobile Money (*115#). If you are based outside Zambia, we coordinate convenient international payment arrangements (such as Mukuru, Western Union, Remitly, WorldRemit, or wire transfer) directly on WhatsApp. Once payment is verified, your calendar invitation and virtual meeting link will be issued.
             </div>
           </div>
 
@@ -2804,12 +3487,13 @@
         </div>
 
         <div>
-          <h4 class="footer-title">Payment Networks</h4>
+          <h4 class="footer-title">Payment & Booking</h4>
           <ul class="footer-links" style="font-size: 0.85rem; color: var(--text-muted);">
             <li>• Airtel Money Zambia (*115#)</li>
             <li>• MTN Mobile Money Zambia (*115#)</li>
+            <li>• International (Mukuru, Western Union, Remitly, Wire via WhatsApp)</li>
             <li style="margin-top: 0.65rem; color: var(--text-subtle); line-height: 1.5;">
-              * Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation are then issued.
+              * Bookings are confirmed once payment arrangements and verification are completed. Meeting links and calendar invitations are then issued.
             </li>
           </ul>
         </div>
@@ -2879,8 +3563,9 @@
       {
         id: "funding-fellowships",
         name: "Funding, Grants & Fellowships",
-        price: 500,
-        priceDisplay: "K500",
+        priceZMW: "K500",
+        priceUSD: "US$25",
+        priceDisplay: "K500 / US$25",
         duration: "60 minutes",
         description: "Review opportunities (Echoing Green, TEF, Cartier, etc.), check eligibility, and prepare stronger grant and fellowship applications.",
         isPopular: true
@@ -2888,46 +3573,52 @@
       {
         id: "speaking-visibility",
         name: "International Speaking & Global Visibility",
-        price: 650,
-        priceDisplay: "K650",
+        priceZMW: "K650",
+        priceUSD: "US$35",
+        priceDisplay: "K650 / US$35",
         duration: "60 minutes",
         description: "Identify global conferences and panels, develop a compelling speaker biography, and prepare for international audiences.",
         isPopular: false
       },
       {
         id: "pitch-coaching",
-        name: "Pitch Preparation & Presentation Coaching",
-        price: 650,
-        priceDisplay: "K650",
+        name: "Pitch Preparation",
+        priceZMW: "K650",
+        priceUSD: "US$35",
+        priceDisplay: "K650 / US$35",
         duration: "60 minutes",
-        description: "Coaching drawn from over 100 pitches delivered. Rehearse live, identify weaknesses, and prepare for investor/judge Q&A.",
+        description: "Guidance to help you communicate your business idea, value proposition and impact more clearly when pitching to investors, partners or selection panels.",
         isPopular: false
       },
       {
         id: "business-growth",
-        name: "Business Growth & Founder Positioning",
-        price: 950,
-        priceDisplay: "K950",
+        name: "Business Growth & Positioning",
+        priceZMW: "K950",
+        priceUSD: "US$45",
+        priceDisplay: "K950 / US$45",
         duration: "75 minutes",
-        description: "Review your business model, diagnose growth bottlenecks, and position your venture for external partnerships and capital.",
+        description: "Practical guidance on business development, strategic positioning and identifying opportunities to grow your enterprise or expand your impact.",
         isPopular: false
       },
       {
-        id: "financial-planning",
-        name: "Financial Planning & Document Review",
-        price: 1500,
-        priceDisplay: "K1,500",
+        id: "financial-review",
+        name: "Financial Statements & Due Diligence Document Review",
+        priceZMW: "K1,500",
+        priceUSD: "US$75",
+        priceDisplay: "K1,500 / US$75",
         duration: "90 minutes + review",
-        description: "Detailed analysis of costs, pricing margins, unit economics, revenue forecasts, and financial assumptions.",
+        description: "A consultation to review and assess existing financial statements, investor-facing financial information and supporting due diligence documents, and identify areas requiring further attention.",
+        disclaimer: "Please note: The K1,500 / US$75 consultation covers review, assessment and guidance only. Preparing or reconstructing financial statements, creating financial models, producing pitch deck financials or preparing due diligence documents is not included. Additional financial advisory and document preparation services must be quoted separately according to the scope of work required.",
         isPopular: false
       },
       {
         id: "discovery-call",
-        name: "Discovery Call & Business Idea Brainstorming",
-        price: 250,
-        priceDisplay: "K250",
+        name: "Discovery Call",
+        priceZMW: "K250",
+        priceUSD: "US$15",
+        priceDisplay: "K250 / US$15",
         duration: "30 minutes",
-        description: "Have an early-stage business idea or innovation? Share your ideas, ask questions, and brainstorm actionable next steps.",
+        description: "A focused introductory conversation to discuss your business, idea, challenges and goals, and identify potential next steps.",
         isPopular: false
       }
     ];
@@ -2966,6 +3657,8 @@
 
     let currentTrackId = ADVISORY_TRACKS[0].id;
     let currentProvider = "airtel";
+    let currentPrepOption = "upload";
+    let uploadedPrepFile = null;
 
     document.addEventListener("DOMContentLoaded", () => {
       const yearEl = document.getElementById("currentYear");
@@ -2977,6 +3670,19 @@
       setupMobileMenu();
       setupMobileQuickBarObserver();
       setupKeyboardAccessibility();
+
+      const dateInput = document.getElementById("preferredDate");
+      if (dateInput) {
+        dateInput.addEventListener("change", handleDateChange);
+      }
+
+      const countrySelect = document.getElementById("customerCountry");
+      if (countrySelect) {
+        countrySelect.addEventListener("change", (e) => handleCountryChange(e.target.value));
+        if (countrySelect.value) {
+          handleCountryChange(countrySelect.value);
+        }
+      }
     });
 
     function handleLogoError(img) {
@@ -3004,7 +3710,11 @@
             <div class="track-title">${t.name}</div>
             <div style="font-size: 0.775rem; color: var(--text-muted);">${t.duration}</div>
           </div>
-          <div class="track-price">${t.priceDisplay}</div>
+          <div class="track-price">
+            <span class="price-zmw">${t.priceZMW}</span>
+            <span class="price-divider">/</span>
+            <span class="price-usd">${t.priceUSD}</span>
+          </div>
         </div>
       `).join("");
 
@@ -3022,6 +3732,7 @@
     }
 
     function selectTrack(trackId) {
+      if (trackId === "financial-planning") trackId = "financial-review";
       currentTrackId = trackId;
 
       const select = document.getElementById("trackSelect");
@@ -3045,35 +3756,93 @@
       const nameEl = document.getElementById("selectedTrackName");
       const durEl = document.getElementById("selectedTrackDuration");
       const priceEl = document.getElementById("selectedTrackPrice");
+      const disclaimerEl = document.getElementById("trackSummaryDisclaimer");
 
       if (nameEl) nameEl.textContent = track.name;
       if (durEl) durEl.textContent = `${track.duration} • 1-on-1 Virtual Consultation`;
-      if (priceEl) priceEl.textContent = track.priceDisplay;
+      if (priceEl) {
+        priceEl.innerHTML = `
+          <span class="price-zmw">${track.priceZMW}</span>
+          <span class="price-divider" style="font-size: 1.15rem; opacity: 0.5; font-weight: 400; margin: 0 0.2rem;">/</span>
+          <span class="price-usd" style="font-size: clamp(1.4rem, 2.2vw, 1.65rem);">${track.priceUSD}</span>
+        `;
+      }
+
+      if (disclaimerEl) {
+        if (track.disclaimer) {
+          disclaimerEl.innerHTML = `<strong>Please note:</strong> ${track.disclaimer.replace(/^Please note:\s*/i, "")}`;
+          disclaimerEl.style.display = "block";
+        } else {
+          disclaimerEl.style.display = "none";
+        }
+      }
     }
 
     function renderPricingTable() {
       const tbody = document.getElementById("pricingTableBody");
       if (!tbody) return;
 
-      tbody.innerHTML = ADVISORY_TRACKS.map(t => `
-        <tr style="border-bottom: 1px solid var(--border-light);">
-          <td style="padding: 1rem;">
-            <div style="font-weight: 800; color: var(--brand-navy);">${t.name}</div>
-            <div style="font-size: 0.825rem; color: var(--text-muted);">${t.description}</div>
-          </td>
-          <td style="padding: 1rem; color: var(--text-muted); font-size: 0.85rem; white-space: nowrap;">${t.duration}</td>
-          <td style="padding: 1rem; font-weight: 800; color: var(--gold-primary); font-size: 1.05rem; white-space: nowrap;">${t.priceDisplay}</td>
-          <td style="padding: 1rem; text-align: right;">
-            <button 
-              type="button" 
-              class="btn btn-secondary btn-sm"
-              onclick="selectTrackAndScroll('${t.id}')"
-            >
-              Select
-            </button>
-          </td>
-        </tr>
-      `).join("");
+      tbody.innerHTML = ADVISORY_TRACKS.map(t => {
+        const disclaimerHtml = t.disclaimer ? `
+          <div class="service-disclaimer-box" style="margin-top: 0.65rem;">
+            <strong>Please note:</strong> ${t.disclaimer.replace(/^Please note:\s*/i, "")}
+          </div>
+        ` : '';
+
+        const prepHtml = `
+          <details class="prep-note-details">
+            <summary class="prep-note-summary">
+              <svg style="width: 13px; height: 13px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span>Make the Most of Your Consultation! (Preparation Guide)</span>
+            </summary>
+            <div class="prep-note-body">
+              <h6 style="color: var(--brand-navy); font-weight: 800; margin-bottom: 0.35rem;">Make the Most of Your Consultation!</h6>
+              <p style="margin-bottom: 0.35rem;">
+                To help us prepare for a productive session, please submit a brief one-page introduction at least <strong>48 hours before your scheduled call</strong>, covering:
+              </p>
+              <ul>
+                <li><strong>About You:</strong> A little about yourself and your background.</li>
+                <li><strong>Your Idea or Business:</strong> Tell us about your business, innovation or idea, even if it is still at an early stage.</li>
+                <li><strong>Your Main Challenges:</strong> Explain the main difficulties, questions or opportunities you are currently navigating.</li>
+                <li><strong>Your Goals:</strong> Tell us what you would like to achieve from the consultation.</li>
+              </ul>
+              <p style="margin: 0; color: var(--text-muted); font-size: 0.75rem;">
+                This information helps us understand your needs beforehand and make the best use of your consultation time.
+              </p>
+            </div>
+          </details>
+        `;
+
+        return `
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <td style="padding: 1.15rem 1rem; vertical-align: top;">
+              <div style="font-weight: 800; color: var(--brand-navy); font-size: 0.95rem; margin-bottom: 0.25rem;">${t.name}</div>
+              <div style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.45;">${t.description}</div>
+              ${disclaimerHtml}
+              ${prepHtml}
+            </td>
+            <td style="padding: 1.15rem 1rem; color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; vertical-align: top;">
+              <span style="display: inline-block; padding: 0.2rem 0.5rem; background: var(--bg-body); border-radius: var(--radius-sm); font-weight: 600;">${t.duration}</span>
+            </td>
+            <td style="padding: 1.15rem 1rem; font-weight: 800; font-size: 1.05rem; white-space: nowrap; vertical-align: top;">
+              <span class="price-zmw" style="color: var(--gold-primary);">${t.priceZMW}</span>
+              <span class="price-divider" style="opacity: 0.5; font-weight: 400; margin: 0 0.15rem;">/</span>
+              <span class="price-usd" style="color: var(--brand-teal);">${t.priceUSD}</span>
+            </td>
+            <td style="padding: 1.15rem 1rem; text-align: right; vertical-align: top;">
+              <button 
+                type="button" 
+                class="btn btn-secondary btn-sm"
+                onclick="selectTrackAndScroll('${t.id}')"
+              >
+                Select
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join("");
     }
 
     function selectTrackAndScroll(trackId) {
@@ -3081,6 +3850,97 @@
       const bookingEl = document.getElementById("booking");
       if (bookingEl) {
         bookingEl.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    function switchPrepOption(option) {
+      currentPrepOption = option;
+      const tabUpload = document.getElementById("tabPrepUpload");
+      const tabWrite = document.getElementById("tabPrepWrite");
+      const uploadCont = document.getElementById("prepUploadContainer");
+      const writeCont = document.getElementById("prepWriteContainer");
+
+      if (option === "upload") {
+        if (tabUpload) { tabUpload.classList.add("active"); tabUpload.setAttribute("aria-selected", "true"); }
+        if (tabWrite) { tabWrite.classList.remove("active"); tabWrite.setAttribute("aria-selected", "false"); }
+        if (uploadCont) uploadCont.style.display = "block";
+        if (writeCont) writeCont.style.display = "none";
+      } else {
+        if (tabWrite) { tabWrite.classList.add("active"); tabWrite.setAttribute("aria-selected", "true"); }
+        if (tabUpload) { tabUpload.classList.remove("active"); tabUpload.setAttribute("aria-selected", "false"); }
+        if (uploadCont) uploadCont.style.display = "none";
+        if (writeCont) writeCont.style.display = "block";
+      }
+    }
+
+    function handlePrepFileSelected(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      processPrepFile(file);
+    }
+
+    function handlePrepFileDrop(event) {
+      event.preventDefault();
+      const dropzone = document.getElementById("prepDropzone");
+      if (dropzone) dropzone.classList.remove("dragover");
+      const file = event.dataTransfer.files && event.dataTransfer.files[0];
+      if (!file) return;
+      processPrepFile(file);
+    }
+
+    function processPrepFile(file) {
+      const allowedExts = [".pdf", ".docx", ".doc"];
+      const ext = file.name.substring(file.name.lastIndexOf(".")).toLowerCase();
+      if (!allowedExts.includes(ext)) {
+        showToast("Please upload a PDF or Word document (.pdf, .docx, .doc)");
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        showToast("File size exceeds 10MB limit. Please upload a smaller file.");
+        return;
+      }
+
+      uploadedPrepFile = {
+        name: file.name,
+        size: (file.size / 1024).toFixed(1) + " KB",
+        type: file.type
+      };
+
+      const nameEl = document.getElementById("prepFileName");
+      const sizeEl = document.getElementById("prepFileSize");
+      const infoBox = document.getElementById("prepFileInfo");
+
+      if (nameEl) nameEl.textContent = file.name;
+      if (sizeEl) sizeEl.textContent = `(${uploadedPrepFile.size})`;
+      if (infoBox) infoBox.style.display = "flex";
+
+      showToast(`Selected "${file.name}" for your consultation preparation.`);
+    }
+
+    function removePrepFile() {
+      uploadedPrepFile = null;
+      const fileInput = document.getElementById("prepFileInput");
+      if (fileInput) fileInput.value = "";
+      const infoBox = document.getElementById("prepFileInfo");
+      if (infoBox) infoBox.style.display = "none";
+      showToast("Uploaded document removed.");
+    }
+
+    function handleDateChange() {
+      const dateInput = document.getElementById("preferredDate");
+      const warningEl = document.getElementById("prepUrgentWarning");
+      if (!dateInput || !warningEl) return;
+      if (!dateInput.value) {
+        warningEl.style.display = "none";
+        return;
+      }
+      const chosen = new Date(dateInput.value + "T09:00:00");
+      const now = new Date();
+      const diffHours = (chosen.getTime() - now.getTime()) / (1000 * 60 * 60);
+      if (diffHours >= 0 && diffHours < 48) {
+        warningEl.style.display = "block";
+      } else {
+        warningEl.style.display = "none";
       }
     }
 
@@ -3139,12 +3999,41 @@
       setTimeout(() => toast.classList.remove("show"), 2400);
     }
 
+    function handleCountryChange(country) {
+      const zambiaContainer = document.getElementById("zambiaPaymentContainer");
+      const intlNotice = document.getElementById("internationalPaymentNotice");
+      const txRefGroup = document.getElementById("txRefGroup");
+      const txRefLabel = document.getElementById("txRefLabel");
+      const txInput = document.getElementById("txReference");
+      const submitHeading = document.getElementById("submitCardHeading");
+      const submitDesc = document.getElementById("submitCardDescription");
+      const submitBtnText = document.getElementById("btnSubmitWhatsAppText");
+
+      if (country === "Zambia") {
+        if (zambiaContainer) zambiaContainer.style.display = "block";
+        if (intlNotice) intlNotice.style.display = "none";
+        if (txRefGroup) txRefGroup.style.display = "block";
+        if (txRefLabel) txRefLabel.innerHTML = `Transaction Reference / ID <span class="required">*</span>`;
+        if (txInput) txInput.placeholder = "e.g. Transaction ID from Airtel Money or MTN MoMo SMS";
+        if (submitHeading) submitHeading.textContent = "Submit Proof of Payment on WhatsApp";
+        if (submitDesc) submitDesc.textContent = "Share your payment reference and attach your SMS confirmation directly in the chat.";
+        if (submitBtnText) submitBtnText.textContent = "BOOK A ONE-ON-ONE CALL & SUBMIT PROOF";
+      } else {
+        if (zambiaContainer) zambiaContainer.style.display = "none";
+        if (intlNotice) intlNotice.style.display = "block";
+        if (txRefGroup) txRefGroup.style.display = "none";
+        if (submitHeading) submitHeading.textContent = "Submit International Consultation Request";
+        if (submitDesc) submitDesc.textContent = "Connect with us on WhatsApp to discuss payment arrangements tailored to your country and confirm your booking.";
+        if (submitBtnText) submitBtnText.textContent = "SUBMIT INTERNATIONAL BOOKING REQUEST";
+      }
+    }
+
     function handleWhatsAppProofSubmit() {
       const nameInput = document.getElementById("customerName");
+      const countryInput = document.getElementById("customerCountry");
       const phoneInput = document.getElementById("customerPhone");
       const dateInput = document.getElementById("preferredDate");
       const timeSelect = document.getElementById("preferredTime");
-      const notesInput = document.getElementById("customerNotes");
       const txInput = document.getElementById("txReference");
 
       let valid = true;
@@ -3156,6 +4045,13 @@
         nameInput.classList.remove("is-invalid");
       }
 
+      if (!countryInput || !countryInput.value) {
+        if (countryInput) countryInput.classList.add("is-invalid");
+        valid = false;
+      } else {
+        countryInput.classList.remove("is-invalid");
+      }
+
       if (!phoneInput.value.trim() || phoneInput.value.trim().length < 6) {
         phoneInput.classList.add("is-invalid");
         valid = false;
@@ -3164,35 +4060,123 @@
       }
 
       if (!valid) {
-        showToast("Please provide your name and WhatsApp contact number.");
-        nameInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (!nameInput.value.trim()) {
+          showToast("Please provide your full name.");
+          nameInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else if (!countryInput || !countryInput.value) {
+          showToast("Please select your Country of Residence.");
+          countryInput?.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          showToast("Please provide your WhatsApp contact number.");
+          phoneInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
         return;
+      }
+
+      const isZambia = countryInput.value === "Zambia";
+
+      if (isZambia && !txInput.value.trim()) {
+        txInput.classList.add("is-invalid");
+        showToast("Please enter your Mobile Money transaction reference ID.");
+        txInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      } else {
+        txInput.classList.remove("is-invalid");
       }
 
       const track = ADVISORY_TRACKS.find(t => t.id === currentTrackId) || ADVISORY_TRACKS[0];
       const providerName = currentProvider === "airtel" ? "Airtel Money" : "MTN Mobile Money";
-      const txRef = txInput.value.trim() || "Attaching payment SMS confirmation";
+      const txRef = txInput.value.trim() || "Arranging on WhatsApp";
       const prefDate = dateInput.value ? dateInput.value : "Flexible";
       const prefTime = timeSelect.value ? timeSelect.value : "Flexible";
-      const userNotes = notesInput.value.trim() ? notesInput.value.trim() : "None";
 
-      const message = 
+      // Preparation Intro Logic
+      let prepSummaryMessage = "";
+      let prepStatusHtml = "";
+
+      if (currentPrepOption === "upload" && uploadedPrepFile) {
+        prepSummaryMessage = `1-Page Introduction: Document Attached (${uploadedPrepFile.name}, ${uploadedPrepFile.size}) — Attaching file directly in this WhatsApp chat.`;
+        prepStatusHtml = `<strong>1-Page Introduction Document:</strong> Attached "${uploadedPrepFile.name}" (${uploadedPrepFile.size}). Please send the file in the WhatsApp chat window that opens.`;
+      } else if (currentPrepOption === "write") {
+        const aboutVal = document.getElementById("prepAbout")?.value.trim();
+        const bizVal = document.getElementById("prepBusiness")?.value.trim();
+        const chalVal = document.getElementById("prepChallenges")?.value.trim();
+        const goalsVal = document.getElementById("prepGoals")?.value.trim();
+        const progVal = document.getElementById("prepTargetProgram")?.value.trim();
+
+        if (aboutVal || bizVal || chalVal || goalsVal || progVal) {
+          const progLine = progVal ? `\n- Target Programme / Link: ${progVal}` : '';
+          prepSummaryMessage = `Written Introduction (48h Prep):
+- About You: ${aboutVal || "To discuss on call"}
+- Business/Idea: ${bizVal || "Early stage"}
+- Main Challenges: ${chalVal || "To discuss on call"}
+- Goals: ${goalsVal || "Advisory guidance"}${progLine}`;
+          prepStatusHtml = `<strong>Written Preparation Response Recorded:</strong> Introductory details ${progVal ? 'and target opportunity ' : ''}submitted. Your advisor will review them before the call.`;
+        } else {
+          prepSummaryMessage = `1-Page Introduction: Will submit at least 48 hours before scheduled call.`;
+          prepStatusHtml = `<strong>Preparation Note:</strong> Please remember to send your brief 1-page introduction on WhatsApp at least 48 hours before your session.`;
+        }
+      } else {
+        prepSummaryMessage = `1-Page Introduction: Will submit at least 48 hours before scheduled call.`;
+        prepStatusHtml = `<strong>Preparation Note:</strong> Please remember to send your brief 1-page introduction on WhatsApp at least 48 hours before your session.`;
+      }
+
+      const disclaimerNote = track.disclaimer ? `\nService Scope Note: ${track.disclaimer}\n` : '';
+
+      let message = "";
+      if (isZambia) {
+        message = 
 `Hello Founder Capital, I would like to book a one-on-one founder advisory consultation.
 
 Name: ${nameInput.value.trim()}
+Country of Residence: Zambia
 WhatsApp Contact: ${phoneInput.value.trim()}
 Consultation Focus: ${track.name} (${track.duration})
 Payment Network: ${providerName}
-Fee Paid: ${track.priceDisplay}
+Fee: ${track.priceDisplay}
 Payment Reference: ${txRef}
 Preferred Timing: ${prefDate} (${prefTime})
-Context / Goals: ${userNotes}
+${disclaimerNote}
+Consultation Preparation:
+${prepSummaryMessage}
 
 I have attached my payment SMS receipt. Please verify my payment against the receiving account and issue my meeting link and calendar invitation. Thank you!`;
+      } else {
+        message = 
+`Hello Founder Capital, I would like to book a one-on-one founder advisory consultation.
+
+Name: ${nameInput.value.trim()}
+Country of Residence: ${countryInput.value.trim()}
+WhatsApp Contact: ${phoneInput.value.trim()}
+Consultation Focus: ${track.name} (${track.duration})
+Fee: ${track.priceDisplay}
+Preferred Timing: ${prefDate} (${prefTime})
+${disclaimerNote}
+Consultation Preparation:
+${prepSummaryMessage}
+
+I am an international client based in ${countryInput.value.trim()} and would like to arrange payment (e.g. via Mukuru, Western Union, Remitly, WorldRemit, or wire transfer) and confirm my appointment. Thank you!`;
+      }
 
       const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
       const statusCard = document.getElementById("verificationStatusCard");
+      const statusTitle = document.getElementById("verificationStatusTitle");
+      const statusText = document.getElementById("verificationStatusText");
+      const confirmPrepStatus = document.getElementById("confirmPrepStatus");
+
+      if (isZambia) {
+        if (statusTitle) statusTitle.textContent = "Payment Submission Prepared";
+        if (statusText) statusText.textContent = "Thank you! Your consultation request has been prepared. Bookings are confirmed only after payment is verified against the receiving account. A meeting link and calendar invitation will then be issued directly to your WhatsApp.";
+      } else {
+        if (statusTitle) statusTitle.textContent = "Thank you for your booking request!";
+        if (statusText) statusText.textContent = "We've received your consultation request. If you are based outside Zambia, we will contact you through WhatsApp to discuss the appropriate payment arrangements for your location. Your appointment will be confirmed once the necessary arrangements have been completed.";
+      }
+
+      if (confirmPrepStatus) {
+        confirmPrepStatus.innerHTML = prepStatusHtml;
+      }
+
       if (statusCard) {
         statusCard.style.display = "block";
         statusCard.scrollIntoView({ behavior: "smooth", block: "center" });
